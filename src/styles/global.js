@@ -1,0 +1,36 @@
+import { createGlobalStyle } from 'styled-components'
+
+//Adicionando as styles globais e acrescentando font roboto
+export default createGlobalStyle `
+   @import url('https://fonts.googleapis.com/css?family=Roboto:500&display=swap');
+    *{
+        margin: 0;
+        padding: 0;
+        outline: 0;
+        box-sizing: border-box;
+    }
+
+    header {
+        width: 100%;
+    }
+
+    html, body , #root{
+        height: 100%;
+    }
+    
+    body{
+        font: 14px 'Roboto', sans-serif;
+        background: #ecf1f8;
+        color: #333;
+        -webkit-font-smoothing: antialiased !important
+    }
+
+    ul{
+        list-style: none;
+    }
+
+`;
+
+// -webkit-font-smoothing: antialiased !important = deixar a font mais detalhada , retira a pixerização
+// list-style: none; = retira as bolinhas da lista
+//background: #ecf1f8;
