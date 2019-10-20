@@ -27,6 +27,9 @@ const data = loadLists();
 
 export default function Header() {
   const [name] = useState(data);
+  const [anchorElement, setAnchorElement] = useState(null);
+  const handleOpenMenu = e => setAnchorElement(e.target);
+  const handleCloseMenu = () => setAnchorElement(null);
 
   const classes = useStyles();
   return (
@@ -37,10 +40,14 @@ export default function Header() {
             <h1>Kardex</h1>
           </LogoContainer>
           <Typography> Olá {name[0].name}</Typography>
-          <IconButton color="inherit">
+          <IconButton color="inherit" onClick={handleOpenMenu}>
             <AccountCircle />
           </IconButton>
-          <Menu open={false}>
+          <Menu open={Boolean(anchorElement)} 
+                onClose={handleCloseMenu}
+                anchorEl={anchorElement}>
+            <MenuItem>Convidar Membros</MenuItem>
+            <MenuItem>Configuração</MenuItem>
             <MenuItem>Sair</MenuItem>
           </Menu>
         </Toolbar>

@@ -8,10 +8,12 @@ export default createGlobalStyle `
         padding: 0;
         outline: 0;
         box-sizing: border-box;
+        
     }
 
     html, body , #root{
         height: 100%;
+        background-color: lightgrey;
     }
     
     body{
