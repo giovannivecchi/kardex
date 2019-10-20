@@ -20,9 +20,12 @@ export default function Board() {
 
         }))
     }
+
+
     return (
         <BoardContext.Provider value={{ lists, move }}>
             <Container>
+             
                 {lists.map((list, index) => <List key={list.title} index={index} data={list} />)}
             </Container>
         </BoardContext.Provider>

@@ -2,9 +2,13 @@ import React, { useRef, useContext } from 'react';
 import { useDrag, useDrop } from 'react-dnd';
 import { Container, Label } from './styles';
 import BorderContext from '../Board/context';
+
+
 export default function Card({ data, index, listIndex }) {
     const ref = useRef();
     const { move } = useContext(BorderContext);
+
+  
 
     const [{ isDragging }, dragRef] = useDrag({
         item: { type: 'CARD', index, listIndex },
@@ -44,12 +48,16 @@ export default function Card({ data, index, listIndex }) {
             item.listIndex = targetListIndex;
         }
     })
+   
+ 
 
     dragRef(dropRef(ref));
 
     return (
-        <div onClick={() => console.log("card" + index) }>
-            <Container ref={ref} isDragging={isDragging}>
+        <>        
+        <div  onClick={() => console.log("card" + index + "lista " + listIndex) }>
+
+            <Container  ref={ref} isDragging={isDragging} >
                 <header>
                     {data.labels.map(label => <Label key={label} color={label} />)}
                 </header>
@@ -58,5 +66,6 @@ export default function Card({ data, index, listIndex }) {
                     <img src={data.user} alt="" />)}
             </Container>
         </div>
+        </>
     )
 }

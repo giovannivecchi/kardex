@@ -10,10 +10,6 @@ export default createGlobalStyle `
         box-sizing: border-box;
     }
 
-    header {
-        width: 100%;
-    }
-
     html, body , #root{
         height: 100%;
     }

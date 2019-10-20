@@ -1,8 +1,9 @@
 export function loadLists() {
-    return [
+    return [      
       { 
         title: 'Tarefas', 
-        creatable: true,
+        creatable: true,       
+        name: "Giovanni",
         cards: [
           {
             id: 1,
@@ -92,6 +93,6 @@ export function loadLists() {
             labels: ['#7159c1'],
           }
         ]
-      },
+      }      
     ];
   }
