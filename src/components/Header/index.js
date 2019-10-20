@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
 import { Typography } from "@material-ui/core";
 import AccountCircle from "@material-ui/icons/AccountCircle";
-import { loadLists } from '../../services/api';
+import MenuItem from "@material-ui/core/MenuItem";
+import Menu from "@material-ui/core/Menu";
+
+import { loadLists } from "../../services/api";
+import { LogoContainer } from "./styles";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -19,19 +23,26 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
+const data = loadLists();
+
 export default function Header() {
+  const [name] = useState(data);
+
   const classes = useStyles();
   return (
     <div className={classes.root}>
       <AppBar position="static" styles={"display: flex"}>
         <Toolbar>
-          <h1>Kardex</h1>          
-          <>
-          <Typography> Olá Giovanni Vecchi</Typography>
-            <IconButton color="inherit">
-              <AccountCircle />
-            </IconButton>
-          </>
+          <LogoContainer>
+            <h1>Kardex</h1>
+          </LogoContainer>
+          <Typography> Olá {name[0].name}</Typography>
+          <IconButton color="inherit">
+            <AccountCircle />
+          </IconButton>
+          <Menu open={false}>
+            <MenuItem>Sair</MenuItem>
+          </Menu>
         </Toolbar>
       </AppBar>
     </div>
