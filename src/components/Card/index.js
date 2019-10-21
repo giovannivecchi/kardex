@@ -6,7 +6,7 @@ import { Container, Label } from "./styles";
 import BorderContext from "../Board/context";
 import IconButton from "@material-ui/core/IconButton";
 import Close from "@material-ui/icons/Close";
-import { textAlign } from "@material-ui/system";
+import InputBase from "@material-ui/core/InputBase";
 
 export default function Card({ data, index, listIndex }) {
   const ref = useRef();
@@ -85,6 +85,11 @@ export default function Card({ data, index, listIndex }) {
       padding: theme.spacing(2, 4, 3),
       borderRadius: "15px",
       flexGrow: 1
+    },
+    inputBase: {
+      "&:focus ": {
+        backgroundColor: "lightgrey"
+      }
     }
   }));
 
@@ -106,10 +111,17 @@ export default function Card({ data, index, listIndex }) {
         <div style={modalStyle} className={classes.paper}>
           <div>
             <h2>
-              {data.content}
               <IconButton style={{ float: "right" }} onClick={handleClose}>
                 <Close />
               </IconButton>
+              <InputBase
+                id="standard-bare"
+                className={classes.inputBase}
+                defaultValue={data.content}
+                margin="normal"
+                style={{ display: "flex", justifyContent: "center" }}
+                inputProps={{ "aria-label": "naked" }}
+              />
             </h2>
           </div>
 
