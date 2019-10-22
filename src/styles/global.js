@@ -13,7 +13,7 @@ export default createGlobalStyle `
 
     html, body , #root{
         height: 100%;
-        background-color: lightgrey;
+        background: linear-gradient(to right, #DAE6E2, #DAE6E2);
     }
     
     body{

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
@@ -10,18 +9,7 @@ import Menu from "@material-ui/core/Menu";
 
 import { loadLists } from "../../services/api";
 import { LogoContainer } from "./styles";
-
-const useStyles = makeStyles(theme => ({
-  root: {
-    flexGrow: 1
-  },
-  menuButton: {
-    marginRight: theme.spacing(2)
-  },
-  title: {
-    flexGrow: 1
-  }
-}));
+import { useStyles } from "./styles";
 
 const data = loadLists();
 
@@ -34,18 +22,23 @@ export default function Header() {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <AppBar position="static" styles={"display: flex"}>
+      <AppBar
+        position="static"
+        style={{ background: "linear-gradient(to right, #0062E6, #33AEFF)" }}
+      >
         <Toolbar>
           <LogoContainer>
             <h1>Kardex</h1>
           </LogoContainer>
           <Typography> Olá {name[0].name}</Typography>
-          <IconButton color="inherit" onClick={handleOpenMenu}>
+          <IconButton color={"inherit"} onClick={handleOpenMenu}>
             <AccountCircle />
           </IconButton>
-          <Menu open={Boolean(anchorElement)} 
-                onClose={handleCloseMenu}
-                anchorEl={anchorElement}>
+          <Menu
+            open={Boolean(anchorElement)}
+            onClose={handleCloseMenu}
+            anchorEl={anchorElement}
+          >
             <MenuItem>Convidar Membros</MenuItem>
             <MenuItem>Configuração</MenuItem>
             <MenuItem>Sair</MenuItem>

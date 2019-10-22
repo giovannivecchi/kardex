@@ -10,7 +10,7 @@ export function loadLists() {
           content: "Estudar módulo 01 de NodeJS",
           labels: ["#7159c1"],
           user:
-            "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg",
+            "https://avatars3.githubusercontent.com/u/50344535?s=460&v=4",
           visible: true
         },
         {
@@ -36,7 +36,7 @@ export function loadLists() {
             'Gravar Aula "NextJS: Utilizando server-side rendering com ReactJS"',
           labels: ["#54e1f7"],
           user:
-            "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg",
+            "https://avatars1.githubusercontent.com/u/50504236?s=460&v=4",
           visible: true
         },
         {
@@ -58,7 +58,7 @@ export function loadLists() {
           content: "Recriando clone do Pipefy",
           labels: [],
           user:
-            "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg",
+            "https://avatars3.githubusercontent.com/u/50344535?s=460&v=4",
           visible: true
         },
         {
@@ -66,7 +66,7 @@ export function loadLists() {
           content: "Criando map",
           labels: [],
           user:
-            "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg",
+            "https://avatars1.githubusercontent.com/u/50504236?s=460&v=4",
           visible: false
         }
       ]
@@ -87,7 +87,7 @@ export function loadLists() {
           content: "Gravar testes e deploy ReactJS",
           labels: ["#54e1f7"],
           user:
-            "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg",
+            "https://avatars3.githubusercontent.com/u/50344535?s=460&v=4",
           visible: true
         },
         {

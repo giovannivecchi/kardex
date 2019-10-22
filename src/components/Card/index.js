@@ -1,12 +1,12 @@
 import React, { useRef, useContext } from "react";
 import { useDrag, useDrop } from "react-dnd";
-import { makeStyles } from "@material-ui/core/styles";
+import { useStyles } from "./styles";
 import Modal from "@material-ui/core/Modal";
 import { Container, Label } from "./styles";
 import BorderContext from "../Board/context";
 import IconButton from "@material-ui/core/IconButton";
 import Close from "@material-ui/icons/Close";
-import InputBase from "@material-ui/core/InputBase";
+import TextField from "@material-ui/core/InputBase";
 
 export default function Card({ data, index, listIndex }) {
   const ref = useRef();
@@ -75,24 +75,6 @@ export default function Card({ data, index, listIndex }) {
     };
   }
 
-  const useStyles = makeStyles(theme => ({
-    paper: {
-      position: "absolute",
-      width: 400,
-      backgroundColor: theme.palette.background.paper,
-      border: "1px solid #D3D3D3",
-      boxShadow: theme.shadows[5],
-      padding: theme.spacing(2, 4, 3),
-      borderRadius: "15px",
-      flexGrow: 1
-    },
-    inputBase: {
-      "&:focus ": {
-        backgroundColor: "lightgrey"
-      }
-    }
-  }));
-
   const classes = useStyles();
   const [modalStyle] = React.useState(getModalStyle);
   const [open, setOpen] = React.useState(false);
@@ -114,7 +96,7 @@ export default function Card({ data, index, listIndex }) {
               <IconButton style={{ float: "right" }} onClick={handleClose}>
                 <Close />
               </IconButton>
-              <InputBase
+              <TextField
                 id="standard-bare"
                 className={classes.inputBase}
                 defaultValue={data.content}
