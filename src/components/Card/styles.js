@@ -1,21 +1,22 @@
 import styled, { css } from "styled-components";
 import { makeStyles } from "@material-ui/core/styles";
 
+
 export const Container = styled.div`
   position: relative;
   background: #fff;
   border-radius: 20px;
-  margin-bottom: 10px;  
+  margin-bottom: 10px;
   padding: 15px;
-  box-shadow: 0 9px 7px 3px rgba(192, 208, 230, 1.0);
+  box-shadow: 0 9px 7px 3px rgba(192, 208, 230, 1);
   border-top: 20px solid rgba(230, 236, 245, 0.4);
   cursor: grab;
   border: 10px solid rgba(230, 236, 245, 0.2);
 
   header {
-    position: absolute;    
+    position: absolute;
     top: -12px;
-    left: 300px;
+    left: 90%;
     width: 100px;
   }
 
@@ -30,6 +31,7 @@ export const Container = styled.div`
     border-radius: 2px;
     margin-top: 5px;
   }
+
   ${props =>
     props.isDragging &&
     css`
@@ -59,7 +61,7 @@ export const Container = styled.div`
 export const Label = styled.span`
   width: 10px;
   height: 10px;
-  border-radius: 2px;  
+  border-radius: 2px;
   display: inline-block;
   background: ${props => props.color};
 `;
@@ -69,18 +71,28 @@ export const useStyles = makeStyles(theme => ({
     position: "absolute",
     width: 400,
     height: 500,
-    backgroundColor: theme.palette.background.paper,
+    backgroundColor: "#e0e0e0",
     border: "1px solid #D3D3D3",
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),
     borderRadius: "15px",
     flexGrow: 1
   },
+  teste: {
+    border: "0px solid"
+  },
+  
+  buttonAdd: {
+    backgroundColor: "#007bff",
+
+    marginTop: "10%"
+  },
+
   inputBase: {
+    marginLeft: "1.5%",
     color: "black",
     "&:hover ": {
-      backgroundColor: "lightgrey",
-      
+      backgroundColor: "lightgrey"
     }
   }
 }));

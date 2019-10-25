@@ -7,6 +7,15 @@ import BorderContext from "../Board/context";
 import IconButton from "@material-ui/core/IconButton";
 import Close from "@material-ui/icons/Close";
 import TextField from "@material-ui/core/InputBase";
+import Grid from "@material-ui/core/Grid";
+import ExpansionPanel from "@material-ui/core/ExpansionPanel";
+import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
+import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
+import Typography from "@material-ui/core/Typography";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import Paper from "@material-ui/core/Paper";
+import Face from "@material-ui/icons/Face";
+import Button from "@material-ui/core/Button";
 
 export default function Card({ data, index, listIndex }) {
   const ref = useRef();
@@ -78,6 +87,11 @@ export default function Card({ data, index, listIndex }) {
   const classes = useStyles();
   const [modalStyle] = React.useState(getModalStyle);
   const [open, setOpen] = React.useState(false);
+  const [expanded, setExpanded] = React.useState("Open");
+
+  const handleChange = panel => (event, newExpanded) => {
+    setExpanded(newExpanded ? panel : false);
+  };
 
   const handleOpen = () => {
     setOpen(true);
@@ -91,25 +105,68 @@ export default function Card({ data, index, listIndex }) {
     <>
       <Modal open={open} onClose={handleClose}>
         <div style={modalStyle} className={classes.paper}>
-          <div>
-            <h2>
-              <IconButton style={{ float: "right" }} onClick={handleClose}>
-                <Close />
-              </IconButton>
-              <TextField
-                id="standard-bare"
-                className={classes.inputBase}
-                defaultValue={data.content}
-                margin="normal"
-                style={{ display: "flex", justifyContent: "center" }}
-                inputProps={{ "aria-label": "naked" }}
-              />
-            </h2>
-          </div>
+          <Grid container spacing={3}>
+            <Grid item xs={8} className={classes.teste}>
+              <Paper>
+                <Grid item xs={12} justify="center">
+                  <TextField
+                    id="standard-bare"
+                    className={classes.inputBase}
+                    defaultValue={data.content}
+                    margin="normal"
+                    style={{ display: "flex", justifyContent: "center" }}
+                    inputProps={{ "aria-label": "naked" }}
+                  />
+                </Grid>
+              </Paper>
+              <Paper>
+                <Grid container spacing={3} justify="center" style={{marginTop: "3px"}}>
+                  <Grid item xs={3}>
+                    <Button textSizeLarge iconSizeSmall startIcon={<Face />}>
+                      MEMBROS
+                    </Button>
+                  </Grid>
+                  <Grid item xs={3}>
+                    <Button textSizeLarge iconSizeSmall startIcon={<Face />}>
+                      ETIQUETAS
+                    </Button>
+                  </Grid>
+                  <Grid item xs={3}>
+                    <Button textSizeLarge iconSizeSmall startIcon={<Face />}>
+                      IDENTIFICADOR
+                    </Button>
+                  </Grid>
+                </Grid>
+              </Paper>
 
-          <p id="simple-modal-description">
-            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-          </p>
+              <ExpansionPanel
+                expanded={expanded === "Open"}
+                onChange={handleChange("Open")}            
+              >
+                <ExpansionPanelSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
+                  <Typography className={classes.heading}>Descrição</Typography>
+                </ExpansionPanelSummary>
+                <ExpansionPanelDetails>
+                  <Typography>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Suspendisse malesuada lacus ex, sit amet blandit leo
+                    lobortis eget.
+                  </Typography>
+                </ExpansionPanelDetails>
+              </ExpansionPanel>
+            </Grid>
+            <Grid item xs={4} className={classes.teste}>
+              <Grid>
+                <IconButton style={{ float: "right" }} onClick={handleClose}>
+                  <Close />
+                </IconButton>
+              </Grid>
+            </Grid>
+          </Grid>
         </div>
       </Modal>
 

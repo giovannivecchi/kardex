@@ -50,7 +50,7 @@ export function loadLists() {
       ]
     },
     {
-      title: "Fazendo",
+      title: "Desenvolvendo",
       creatable: true,
       cards: [
         {
@@ -72,7 +72,7 @@ export function loadLists() {
       ]
     },
     {
-      title: "Pausado",
+      title: "Validação",
       creatable: true,
       cards: [
         {
@@ -116,6 +116,7 @@ export function loadLists() {
           user:
             "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg",
           visible: true
+          
         },
         {
           id: 13,
