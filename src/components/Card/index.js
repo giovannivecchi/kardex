@@ -11,6 +11,8 @@ import Grid from "@material-ui/core/Grid";
 import ExpansionPanel from "@material-ui/core/ExpansionPanel";
 import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
 import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
+import ExpansionPanelActions from "@material-ui/core/ExpansionPanelActions";
+import Divider from "@material-ui/core/Divider";
 import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import Paper from "@material-ui/core/Paper";
@@ -88,9 +90,14 @@ export default function Card({ data, index, listIndex }) {
   const [modalStyle] = React.useState(getModalStyle);
   const [open, setOpen] = React.useState(false);
   const [expanded, setExpanded] = React.useState("Open");
+  const [comments, setComments] = React.useState("Open");
 
   const handleChange = panel => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
+  };
+
+  const handleChangeComments = comments => (event, newComments) => {
+    setComments(newComments ? comments : false);
   };
 
   const handleOpen = () => {
@@ -120,7 +127,12 @@ export default function Card({ data, index, listIndex }) {
                 </Grid>
               </Paper>
               <Paper>
-                <Grid container spacing={3} justify="center" style={{marginTop: "3px"}}>
+                <Grid
+                  container
+                  spacing={3}
+                  justify="center"
+                  style={{ marginTop: "3px" }}
+                >
                   <Grid item xs={3}>
                     <Button textSizeLarge iconSizeSmall startIcon={<Face />}>
                       MEMBROS
@@ -141,7 +153,7 @@ export default function Card({ data, index, listIndex }) {
 
               <ExpansionPanel
                 expanded={expanded === "Open"}
-                onChange={handleChange("Open")}            
+                onChange={handleChange("Open")}
               >
                 <ExpansionPanelSummary
                   expandIcon={<ExpandMoreIcon />}
@@ -150,13 +162,48 @@ export default function Card({ data, index, listIndex }) {
                 >
                   <Typography className={classes.heading}>Descrição</Typography>
                 </ExpansionPanelSummary>
+                <Grid item xs={12} styles={{ border: 1 }}>
+                  <ExpansionPanelDetails>
+                    <TextField
+                      defaultValue={data.descricao}
+                      style={{ display: "flex", justifyContent: "center" }}
+                    ></TextField>
+                  </ExpansionPanelDetails>
+                </Grid>
+              </ExpansionPanel>
+              <ExpansionPanel>
+                <ExpansionPanelSummary
+                  aria-controls="panel1a-content"
+                  id="panelcoment"
+                >
+                  <Grid item xs={12} styles={{ border: 1 }}>
+                    <Typography className={classes.heading}>
+                      Comentarios
+                    </Typography>
+                  </Grid>
+                </ExpansionPanelSummary>
                 <ExpansionPanelDetails>
-                  <Typography>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Suspendisse malesuada lacus ex, sit amet blandit leo
-                    lobortis eget.
-                  </Typography>
+                  <Grid item xs={12}>
+                    <TextField
+                      id="standard-bare"
+                      className={classes.inputBase}
+                      defaultValue={data.content}
+                      margin="normal"
+                      onChange={handleChangeComments("Open")}
+                      style={{ display: "flex", justifyContent: "center" }}
+                      inputProps={{ "aria-label": "naked" }}
+                    />
+                  </Grid>
                 </ExpansionPanelDetails>
+                <Divider />
+                <ExpansionPanelActions>
+                  <Grid item xs={12}>
+                    <Button size="small">Cancel</Button>
+                    <Button size="small" color="primary">
+                      Save
+                    </Button>
+                  </Grid>
+                </ExpansionPanelActions>
               </ExpansionPanel>
             </Grid>
             <Grid item xs={4} className={classes.teste}>

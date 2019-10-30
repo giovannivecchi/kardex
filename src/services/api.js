@@ -11,7 +11,8 @@ export function loadLists() {
           labels: ["#7159c1"],
           user:
             "https://avatars3.githubusercontent.com/u/50344535?s=460&v=4",
-          visible: true
+          visible: true,
+          descricao: "Realizar o estudo do Modulo 1"
         },
         {
           id: 2,
@@ -20,7 +21,8 @@ export function loadLists() {
           labels: ["#7159c1"],
           user:
             "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg",
-          visible: true
+          visible: true,
+          descricao: "Realizar o estudo do Modulo 1"
         },
         {
           id: 3,
@@ -28,7 +30,8 @@ export function loadLists() {
           labels: ["#7159c1"],
           user:
             "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg",
-          visible: true
+          visible: true,
+          descricao: "Realizar o estudo do Modulo 1"
         },
         {
           id: 4,
@@ -37,7 +40,8 @@ export function loadLists() {
           labels: ["#54e1f7"],
           user:
             "https://avatars1.githubusercontent.com/u/50504236?s=460&v=4",
-          visible: true
+          visible: true,
+          descricao: "Realizar o estudo do Modulo 1"
         },
         {
           id: 1000,
@@ -45,7 +49,8 @@ export function loadLists() {
           labels: ["#54e1f7"],
           user:
             "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg",
-          visible: false
+          visible: false,
+          descricao: "Realizar o estudo do Modulo 1"
         }
       ]
     },
@@ -59,7 +64,8 @@ export function loadLists() {
           labels: [],
           user:
             "https://avatars3.githubusercontent.com/u/50344535?s=460&v=4",
-          visible: true
+          visible: true,
+          descricao: "Realizar o estudo do Modulo 1"
         },
         {
           id: 14,
@@ -67,7 +73,8 @@ export function loadLists() {
           labels: [],
           user:
             "https://avatars1.githubusercontent.com/u/50504236?s=460&v=4",
-          visible: false
+          visible: false,
+          descricao: "Realizar o estudo do Modulo 1"
         }
       ]
     },
@@ -80,7 +87,8 @@ export function loadLists() {
           content: "Gravar sobre Geolocalização e mapas com React Native",
           labels: ["#7159c1"],
           user: "https://avatars1.githubusercontent.com/u/50504236?s=460&v=4",
-          visible: true
+          visible: true,
+          descricao: "Realizar o estudo do Modulo 1"
         },
         {
           id: 8,
@@ -88,13 +96,15 @@ export function loadLists() {
           labels: ["#54e1f7"],
           user:
             "https://avatars3.githubusercontent.com/u/50344535?s=460&v=4",
-          visible: true
+          visible: true,
+          descricao: "Realizar o estudo do Modulo 1"
         },
         {
           id: 9,
           content: "Ajustes na biblioteca unform",
           labels: [],
-          visible: false
+          visible: false,
+          descricao: "Realizar o estudo do Modulo 1"
         }
       ]
     },
@@ -107,7 +117,8 @@ export function loadLists() {
           id: 10,
           content: "Gravar aula sobre deploy e CI com React Native",
           labels: [],
-          visible: true
+          visible: true,
+          descricao: "Realizar o estudo do Modulo 1"
         },
         {
           id: 12,
@@ -115,7 +126,8 @@ export function loadLists() {
           labels: ["#54e1f7"],
           user:
             "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg",
-          visible: true
+          visible: true,
+          descricao: "Realizar o estudo do Modulo 1"
           
         },
         {
@@ -123,7 +135,8 @@ export function loadLists() {
           content:
             'Gravar Aula "Internacionalização de aplicações Node.js, ReactJS e React Native"',
           labels: ["#7159c1"],
-          visible: false
+          visible: false,
+          descricao: "Realizar o estudo do Modulo 1"
         }
       ]
     }
