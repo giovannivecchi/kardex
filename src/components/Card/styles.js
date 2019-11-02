@@ -1,7 +1,6 @@
 import styled, { css } from "styled-components";
 import { makeStyles } from "@material-ui/core/styles";
 
-
 export const Container = styled.div`
   position: relative;
   background: #fff;
@@ -58,12 +57,33 @@ export const Container = styled.div`
       }
     `}
 `;
+
+
 export const Label = styled.span`
   width: 10px;
   height: 10px;
   border-radius: 2px;
   display: inline-block;
   background: ${props => props.color};
+`;
+
+export const TextArea = styled.textarea`
+    background: transparent;
+    border-radius: 3px;
+    box-shadow: none;
+    font-size: 20px;
+    font-weight: 600;
+    border-style: ${props => props.title};
+   
+    line-height: 24px;
+    margin: -4px -8px;
+    min-height: 24px;
+    padding: 4px 8px;
+    resize: none;
+    overflow: hidden; 
+    overflow-wrap: break-word;
+    height: 33px;
+    width: 80%;
 `;
 
 export const useStyles = makeStyles(theme => ({
@@ -78,10 +98,12 @@ export const useStyles = makeStyles(theme => ({
     borderRadius: "15px",
     flexGrow: 1
   },
+
+
   teste: {
     border: "0px solid"
   },
-  
+
   buttonAdd: {
     backgroundColor: "#007bff",
 
