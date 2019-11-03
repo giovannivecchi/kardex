@@ -1,15 +1,48 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import List from "../List";
 import produce from "immer";
-import { loadLists } from "../../services/api";
+import axios from "axios";
+//import { loadLists } from "../../services/api";
 import BoardContext from "./context";
 
 import { Container } from "./styles";
 
-const data = loadLists();
+const initialState = {
+  board: [
+    {
+      id: 1,
+      quadro: "",
+      produce: [
+        {
+          title: "",
+          creatable: true,
+          name: "",
+          cards: [
+            {
+              id: 1,
+              content: "Estudar módulo 01 de NodeJS",
+              labels: ["#7159c1"],
+              user:
+                "https://avatars3.githubusercontent.com/u/50344535?s=460&v=4",
+              visible: true,
+              descricao: "Realizar o estudo do Modulo 1"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+};
 
 export default function Board() {
-  const [lists, setList] = useState(data);
+  const baseUrl = "http://localhost:3001/board";
+  const [lists, setList] = useState(initialState.board[0].produce);
+
+  useEffect(() => {
+    axios(baseUrl).then(resp => {      
+      setList(resp.data[0].produce)
+    });
+  });
 
   function move(fromList, toList, from, to) {
     setList(
