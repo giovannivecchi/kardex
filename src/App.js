@@ -4,18 +4,18 @@ import HTML5Backend from "react-dnd-html5-backend";
 import GlobalStyle from "./styles/global";
 import Header from "./components/Header";
 
-import { HashRouter } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import Routes from "./routes";
 
 function App() {
   return (
-    <HashRouter>
-      <DndProvider backend={HTML5Backend}>
+    <DndProvider backend={HTML5Backend}>
+      <BrowserRouter>
         <Header />
         <Routes />
         <GlobalStyle />
-      </DndProvider>
-    </HashRouter>
+      </BrowserRouter>
+    </DndProvider>
   );
 }
 //GlobalStyle - cor do fundo

@@ -23,7 +23,7 @@ export default function Header() {
   return (
     <div className={classes.root}>
       <AppBar
-        position="static"
+        position="fixed"
         style={{ background: "linear-gradient(to right, #0062E6, #33AEFF)" }}
       >
         <Toolbar>

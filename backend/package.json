@@ -7,6 +7,6 @@
     "json-server": "0.13.0"
   },
   "scripts":{
-    "start": "json-server --watch db.json --port 3001"
+    "start": "json-server --watch ./giovanni.vecchi/db.json --port 3001"
   }
 }

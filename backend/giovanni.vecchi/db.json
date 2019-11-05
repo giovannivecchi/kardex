@@ -1,13 +1,13 @@
-{
+{ 
   "board": [
     {
       "id": 1,
       "quadro": "",
+      "email": "giovanniovecchi@gmail.com",
       "produce": [
         {
           "title": "Tarefas",
-          "creatable": true,
-          "name": "Giovanni",
+          "creatable": true,        
           "cards": [
             {
               "id": 1,
