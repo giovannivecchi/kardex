@@ -10,4 +10,16 @@ export const Container = styled.div`
   border-top: 20px solid rgba(230, 236, 245, 0.4);
   cursor: grab;
   border: 10px solid rgba(230, 236, 245, 0.2);
+  margin-top: 10%;
+  width: 250px;
+  height: 150px;
+`;
+
+
+export const Label = styled.span`
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  display: inline-block;
+  background: ${props => props.color};
 `;

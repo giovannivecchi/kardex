@@ -110,6 +110,10 @@ export const useStyles = makeStyles(theme => ({
     marginTop: "10%"
   },
 
+  modal: {
+    marginTop: "5%"
+  },
+
   inputBase: {
     marginLeft: "1.5%",
     color: "black",

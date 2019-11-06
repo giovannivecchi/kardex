@@ -24,7 +24,7 @@ const initialState = {
               labels: ["#7159c1"],
               user:
                 "https://avatars3.githubusercontent.com/u/50344535?s=460&v=4",
-              visible: true,
+              visible: false,
               descricao: "Realizar o estudo do Modulo 1"
             }
           ]
@@ -34,6 +34,7 @@ const initialState = {
   ]
 };
 
+
 export default function Board() {
   const baseUrl = "http://localhost:3001/board";
   const [lists, setList] = useState(initialState.board[0].produce);
@@ -42,7 +43,8 @@ export default function Board() {
     axios(baseUrl).then(resp => {      
       setList(resp.data[0].produce)
     });
-  });
+  }, []);
+  
 
   function move(fromList, toList, from, to) {
     setList(
@@ -58,6 +60,7 @@ export default function Board() {
     <BoardContext.Provider value={{ lists, move }}>
       <Container>
         {lists.map((list, index) => (
+          
           <List key={list.title} index={index} data={list} />
         ))}
       </Container>

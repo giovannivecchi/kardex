@@ -6,7 +6,7 @@
   "dependencies": {
     "json-server": "0.13.0"
   },
-  "scripts":{
+  "scripts": {
     "start": "json-server --watch ./giovanni.vecchi/db.json --port 3001"
   }
 }

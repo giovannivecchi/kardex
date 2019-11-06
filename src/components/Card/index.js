@@ -72,13 +72,13 @@ export default function Card({ data, index, listIndex }) {
     <>
       <Modal
         size="lg"
-        bsPrefix={classes.modal}
+        dialogClassName={classes.modal}
         show={show}
         onHide={handleClose}
       >
         <form>
           <Modal.Header closeButton>
-            <Col xs={8} md={8}>
+            <Col xs={8} md={8} mt={2}>
               <Modal.Title>
                 <TextArea title={title} onChange={handleTitle}>
                   {data.content}
