@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-   position: relative;
+  position: relative;
   background: #fff;
   border-radius: 20px;
   margin-bottom: 10px;
@@ -10,9 +10,15 @@ export const Container = styled.div`
   border-top: 20px solid rgba(230, 236, 245, 0.4);
   cursor: grab;
   border: 10px solid rgba(230, 236, 245, 0.2);
-  margin-top: 10%;
+  margin-top: 10vh;
   width: 250px;
-  height: 150px;
+  height: 150px;  
+  display: flex;
+  align-items:center;
+
+  & + div{
+    margin-top: 3px;
+  }
 `;
 
 

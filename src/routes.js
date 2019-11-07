@@ -7,6 +7,6 @@ import Quadro from "./components/Quadro"
 export default props => 
     <Switch>
         <Route exact path='/' component={Board}/>
-        <Route exact path='/name' component={Quadro}/>
+        <Route exact path='/principal' component={Quadro}/>
         <Redirect from='*' to='/'/>
     </Switch>

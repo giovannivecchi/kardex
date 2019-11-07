@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { makeStyles } from "@material-ui/core/styles";
+import { darken } from "polished";
 
 export const Container = styled.div`
   position: relative;
@@ -11,6 +12,9 @@ export const Container = styled.div`
   border-top: 20px solid rgba(230, 236, 245, 0.4);
   cursor: grab;
   border: 10px solid rgba(230, 236, 245, 0.2);
+  :hover {
+    background: ${darken(0.03, "#FFFDFF")}
+  }
 
   header {
     position: absolute;
@@ -58,7 +62,6 @@ export const Container = styled.div`
     `}
 `;
 
-
 export const Label = styled.span`
   width: 10px;
   height: 10px;
@@ -68,22 +71,22 @@ export const Label = styled.span`
 `;
 
 export const TextArea = styled.textarea`
-    background: transparent;
-    border-radius: 3px;
-    box-shadow: none;
-    font-size: 20px;
-    font-weight: 600;
-    border-style: ${props => props.title};
-   
-    line-height: 24px;
-    margin: -4px -8px;
-    min-height: 24px;
-    padding: 4px 8px;
-    resize: none;
-    overflow: hidden; 
-    overflow-wrap: break-word;
-    height: 33px;
-    width: 80%;
+  background: transparent;
+  border-radius: 3px;
+  box-shadow: none;
+  font-size: 20px;
+  font-weight: 600;
+  border-style: ${props => props.title};
+
+  line-height: 24px;
+  margin: -4px -8px;
+  min-height: 24px;
+  padding: 4px 8px;
+  resize: none;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  height: 33px;
+  width: 80%;
 `;
 
 export const useStyles = makeStyles(theme => ({
@@ -98,7 +101,6 @@ export const useStyles = makeStyles(theme => ({
     borderRadius: "15px",
     flexGrow: 1
   },
-
 
   teste: {
     border: "0px solid"

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Container } from "./styles";
+import { Link } from "react-router-dom";
 
 export default function Quadro(data) {
   const baseUrl = "http://localhost:3001/board";
@@ -18,7 +19,9 @@ export default function Quadro(data) {
     <>
       {lists.map(lists => (
         <Container>
+          <Link  to ="/" >
           <h1>{lists.quadro} </h1>
+          </Link>
         </Container>
       ))}
     </>

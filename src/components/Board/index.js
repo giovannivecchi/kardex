@@ -41,7 +41,7 @@ export default function Board() {
 
   useEffect(() => {
     axios(baseUrl).then(resp => {      
-      setList(resp.data[0].produce)
+      setList(resp.data[1].produce)
     });
   }, []);
   
