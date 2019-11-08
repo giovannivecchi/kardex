@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Container } from "./styles";
+import { Container, ContainerQuadro, Label } from "./styles";
 import { Link } from "react-router-dom";
 
 export default function Quadro(data) {
@@ -17,13 +17,17 @@ export default function Quadro(data) {
 
   return (
     <>
-      {lists.map(lists => (
-        <Container>
-          <Link  to ="/" >
-          <h1>{lists.quadro} </h1>
-          </Link>
-        </Container>
-      ))}
+      <Container>
+        {lists.map(lists => (
+          <div className="card">
+            <Link to="/">
+              <div className="card face">
+                <Label>{lists.quadro} </Label>
+              </div>
+            </Link>
+          </div>
+        ))}
+      </Container>
     </>
   );
 }

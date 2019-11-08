@@ -1,30 +1,49 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.div`
-  position: relative;
-  background: #fff;
-  border-radius: 20px;
-  margin-bottom: 10px;
-  padding: 15px;
-  box-shadow: 0 9px 7px 3px rgba(192, 208, 230, 1);
-  border-top: 20px solid rgba(230, 236, 245, 0.4);
-  cursor: grab;
-  border: 10px solid rgba(230, 236, 245, 0.2);
+  @import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+  padding: 30px;
+  border-radius: 4px;
   margin-top: 10vh;
-  width: 250px;
-  height: 150px;  
-  display: flex;
-  align-items:center;
+  & + div {
+    margin-left: 10vh
+    }
+  font-family: "Poppins", sans-serif;
+  width: 90vw;
+  height: 80vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 15px;
 
-  & + div{
-    margin-top: 3px;
+  .card {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 0 auto;
+    background: #ffff;
+    text-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
+  }
+
+  .card .face {
+    box-shadow: 0 9px 7px 3px rgba(192, 208, 230, 1);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  strong: {
+    display: block;
   }
 `;
 
-
 export const Label = styled.span`
-  width: 10px;
-  height: 10px;
+  font-size: 3em;
   border-radius: 2px;
   display: inline-block;
   background: ${props => props.color};
