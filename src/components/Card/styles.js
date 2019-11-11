@@ -70,7 +70,7 @@ export const Label = styled.span`
   background: ${props => props.color};
 `;
 
-export const TextArea = styled.textarea`
+export const TextArea = styled.input`
   background: transparent;
   border-radius: 3px;
   box-shadow: none;

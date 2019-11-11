@@ -3,8 +3,8 @@ import { Container } from "./styles";
 import { MdAdd } from "react-icons/md";
 import Card from "../Card";
 
-export default function List({ data, index: listIndex }) {
-  const result = data;
+export default function List({ board, data, index: listIndex }) {
+  const result = data;  
   return (
     <>
       <Container done={data.done}>
@@ -27,7 +27,8 @@ export default function List({ data, index: listIndex }) {
                 key={card.id}
                 listIndex={listIndex}
                 index={index}
-                data={card}
+                data={card}      
+                board={board}          
               />
             </>
           ))}

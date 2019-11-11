@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Container, ContainerQuadro, Label } from "./styles";
+import { Container, Label } from "./styles";
 import { Link } from "react-router-dom";
 
 export default function Quadro(data) {
@@ -13,7 +13,7 @@ export default function Quadro(data) {
     });
   }, []);
 
-  console.log(lists.map(quadro => quadro.quadro));
+  (lists.map(quadro => quadro.quadro));
 
   return (
     <>
