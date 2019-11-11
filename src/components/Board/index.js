@@ -36,16 +36,16 @@ const initialState = {
 
 export default function Board() {
   const baseUrl = "http://localhost:3001/board";
-  const [lists, setList] = useState(initialState.board[0]);
-
+  const [lists, setList] = useState(initialState.board[0].produce);
+  const [board, setBoard] = useState(initialState.board);
 
   useEffect(() => {
     axios(baseUrl).then(resp => {
-      setList(resp.data[1]);      
+      setList(resp.data[1].produce);
+      setBoard(resp.data[1]);
     });
   }, []);
 
-  
   function move(fromList, toList, from, to) {
     setList(
       produce(lists, draft => {
@@ -53,15 +53,14 @@ export default function Board() {
         draft[fromList].cards.splice(from, 1);
         draft[toList].cards.splice(to, 0, dragged);
       })
-    );
+    );    
   }
 
   return (
-    <BoardContext.Provider value={{ lists, move }}>
+    <BoardContext.Provider value={{ lists, move }} >
       <Container>
-        {lists.produce.map(( list, index) => (
-          <List key={list.title} index={index} data={list} board={lists} />
-          
+        {lists.map((list, index) => (
+          <List key={list.title} index={index} data={list} board={board} />
         ))}
       </Container>
     </BoardContext.Provider>

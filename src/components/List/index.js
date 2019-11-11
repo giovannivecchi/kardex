@@ -5,6 +5,27 @@ import Card from "../Card";
 
 export default function List({ board, data, index: listIndex }) {
   const result = data;  
+  
+  
+  // const updateLists = e => {
+  //   const lists = { ...board };   
+    
+  //   lists.produce[listIndex].cards[index][e.target.name] = e.target.value;    
+  //   setList({ list : card });
+  // };
+
+  
+  const save = () => {
+    if (listIndex !== undefined){
+    console.log(listIndex);
+    }
+    //const method = "put";
+    // const url = lists.id ? `${baseUrl}/${board.id}` : baseUrl;
+    // axios[method](url, lists).catch(err => {
+    //   console.log(err);
+    // });
+  };
+  save()
   return (
     <>
       <Container done={data.done}>
