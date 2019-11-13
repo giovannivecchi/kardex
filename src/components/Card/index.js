@@ -65,52 +65,68 @@ export default function Card({ board, data, index, listIndex }) {
 
   const [show, setShow] = useState(false);
   const [title, setTitle] = useState("none");
-  const handleClose = () => setShow(false);
-  const handleShow = () => {
-    setShow(true);    
-    
+  const [alterado, setAlterar] = useState(false);
 
+  const handleClose = () => {
+    setShow(false);
+    setAlterar(false)
+  };
+  const handleShow = () => {
+    setShow(true);
+    setTitle("none")
   };
   const handleTitle = () => {
     setTitle(" 1px solid #FFF");
   };
-  
+
   const [lists, setList] = useState(data);
   const baseUrl = "http://localhost:3001/board";
-  const initialState = data;   
+  const [initialState, setInitialState] = useState(data);
 
-  const clear = () => {
-    setList({ lists: initialState });
+  const clear = () => {    
+    setList( initialState );
     handleClose();
   };
 
   const save = () => {
-    const card = lists;
-    
-    const method = "put";    
-    const url = data.id ? `${baseUrl}/${board.id}` : baseUrl;
-    axios[method](url, card.list)
-      .then(resp => {
-        const list = getUpdatedList(resp.data);
-        setList({ lists: initialState.id, list });
-      })
-      .catch(err => {
-        console.log(err);
-      });
+    if (alterado !== false) {
+      const card = lists;
+
+      const method = "put";
+      const url = data.id ? `${baseUrl}/${board.id}` : baseUrl;
+      axios[method](url, card.list)
+        .then(resp => {
+          const list = getUpdatedList(resp.data);
+          setList(list);
+
+          setInitialState(list);
+          setAlterar(false)
+        })
+        .catch(err => {
+          console.log(err);
+        });
+    }
     handleClose();
   };
 
   const getUpdatedList = card => {
-    const list = card.filter(u => u.id !== data.id);
-    return list;
+    return card.produce[listIndex].cards[index];
   };
 
   const updateField = e => {
-    const card = { ...board };   
-    
-    card.produce[listIndex].cards[index][e.target.name] = e.target.value;    
-    setList({ list : card });
+    setAlterar(true)
+    const card = { ...board };
+
+    card.produce[listIndex].cards[index][e.target.name] = e.target.value;
+    setList({ list: card });
   };
+
+  // const updateLists = e => {
+  //   const lists = { ...board };
+
+  //   lists.produce[listIndex].cards[index][e.target.name] = e.target.value;
+  //   setList({ list: card });
+  // };
 
   return (
     <>
@@ -122,10 +138,11 @@ export default function Card({ board, data, index, listIndex }) {
       >
         <form>
           <Modal.Header closeButton>
-            <Col xs={8} md={8} mt={2}>
+            <Col xs={10} md={12} mt={12}>
               <Modal.Title>
                 <TextArea
-                  title={title}
+                  title={"Nome do Card"}
+                  border={title}
                   value={lists.content}
                   name="content"
                   onChange={e => {
@@ -138,14 +155,22 @@ export default function Card({ board, data, index, listIndex }) {
           </Modal.Header>
           <Modal.Body>
             <Col xs={12} md={12}>
-              {data.descricao}
+              <TextArea
+                border={title}
+                value={lists.descricao}
+                name="descricao"
+                onChange={e => {
+                  updateField(e);
+                  handleTitle(e);
+                }}
+              ></TextArea>
             </Col>
           </Modal.Body>
           <Modal.Footer>
             <Button variant="secondary" onClick={e => save(e)}>
               Salvar
             </Button>
-            <Button variant="primary" onClick={e => clear(e)}>
+            <Button variant="primary" onClick={e => clear()}>
               Cancelar
             </Button>
           </Modal.Footer>

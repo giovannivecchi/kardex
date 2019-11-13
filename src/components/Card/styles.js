@@ -70,13 +70,13 @@ export const Label = styled.span`
   background: ${props => props.color};
 `;
 
-export const TextArea = styled.input`
+export const TextArea = styled.textarea`
   background: transparent;
   border-radius: 3px;
   box-shadow: none;
   font-size: 20px;
   font-weight: 600;
-  border-style: ${props => props.title};
+  border-style: ${props => props.border};
 
   line-height: 24px;
   margin: -4px -8px;
@@ -113,7 +113,7 @@ export const useStyles = makeStyles(theme => ({
   },
 
   modal: {
-    marginTop: "5%"
+    marginTop: "10vh"
   },
 
   inputBase: {

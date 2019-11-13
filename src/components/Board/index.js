@@ -53,11 +53,25 @@ export default function Board() {
         draft[fromList].cards.splice(from, 1);
         draft[toList].cards.splice(to, 0, dragged);
       })
-    );    
+    );
   }
 
+  const saveBoard = () => {
+    const method = "put";
+    const newBoard = { ...board };
+    newBoard.produce = lists;
+
+    const url = newBoard.id ? `${baseUrl}/${board.id}` : undefined;
+    if (url !== undefined) {
+      axios[method](url, newBoard).catch(err => {
+        console.log(err);
+      });
+    }
+  };
+
+  saveBoard();
   return (
-    <BoardContext.Provider value={{ lists, move }} >
+    <BoardContext.Provider value={{ lists, move }}>
       <Container>
         {lists.map((list, index) => (
           <List key={list.title} index={index} data={list} board={board} />
