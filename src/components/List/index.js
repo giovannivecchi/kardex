@@ -5,6 +5,12 @@ import Card from "../Card";
 
 export default function List({ board, data, index: listIndex }) {
   const result = data;
+
+
+  const insertCard = () =>
+  {
+
+  }
    
    
   return (
@@ -17,7 +23,7 @@ export default function List({ board, data, index: listIndex }) {
               <MdAdd
                 size={24}
                 color="#FFF"
-                onClick={() => console.log(result.cards)}
+                onClick={(e) => insertCard(e)}
               ></MdAdd>
             </button>
           )}

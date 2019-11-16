@@ -2,6 +2,8 @@ import styled, { css } from "styled-components";
 import { makeStyles } from "@material-ui/core/styles";
 import { darken } from "polished";
 
+const contorno = `outline: none !important; border:1px solid gray ;`;
+
 export const Container = styled.div`
   position: relative;
   background: #fff;
@@ -13,7 +15,7 @@ export const Container = styled.div`
   cursor: grab;
   border: 10px solid rgba(230, 236, 245, 0.2);
   :hover {
-    background: ${darken(0.03, "#FFFDFF")}
+    background: ${darken(0.03, "#FFFDFF")};
   }
 
   header {
@@ -70,13 +72,17 @@ export const Label = styled.span`
   background: ${props => props.color};
 `;
 
-export const TextArea = styled.textarea`
+export const Titulo = styled.textarea`
   background: transparent;
   border-radius: 3px;
   box-shadow: none;
   font-size: 20px;
   font-weight: 600;
-  border-style: ${props => props.border};
+  border-style: none;
+
+  :focus {
+    ${contorno}
+  }
 
   line-height: 24px;
   margin: -4px -8px;
@@ -87,6 +93,48 @@ export const TextArea = styled.textarea`
   overflow-wrap: break-word;
   height: 33px;
   width: 80%;
+`;
+
+export const Subtitle = styled.label`
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  box-shadow: none;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-size: 16px;
+  font-weight: 600;
+  position: relative;
+  color: #000;
+  line-height: 20px;
+  width: auto;
+  margin: 0;
+  min-height: 18px;
+  min-width: 40px;
+  margin-bottom: 2px;
+  -webkit-font-smoothing: antialiased !important;
+`;
+
+export const Descricao = styled.textarea`
+  background: transparent;
+  border-radius: 3px;
+  margin-left: 10px;
+  box-shadow: none;
+  font-size: 14px;
+  font-weight: 400;
+  border-color: rgba(9, 30, 66, 0.13);
+  :focus {
+    ${contorno}
+  }
+  line-height: 24px;
+  min-height: 108px;
+  padding: 4px 8px;
+  resize: none;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  height: 150px;
+  width: 80%;
+  text-rendering: auto;
+  cursor: text;
 `;
 
 export const useStyles = makeStyles(theme => ({
@@ -113,7 +161,7 @@ export const useStyles = makeStyles(theme => ({
   },
 
   modal: {
-    marginTop: "10vh"
+    marginTop: "10vh",    
   },
 
   inputBase: {

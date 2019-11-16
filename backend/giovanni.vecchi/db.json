@@ -161,26 +161,6 @@
           "creatable": true,
           "cards": [
             {
-              "id": 2,
-              "content": "Testando a alteracao do Card 2",
-              "labels": [
-                "#7159c1"
-              ],
-              "user": "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg",
-              "visible": true,
-              "descricao": "Realizar o estudo do Modulo 1"
-            },
-            {
-              "id": 7,
-              "content": "Gravar sobre Geolocalização e mapas com React Native",
-              "labels": [
-                "#7159c1"
-              ],
-              "user": "https://avatars1.githubusercontent.com/u/50504236?s=460&v=4",
-              "visible": true,
-              "descricao": "Realizar o estudo do Modulo 1"
-            },
-            {
               "id": 8,
               "content": "Gravar testes e deploy ReactJS",
               "labels": [
@@ -191,18 +171,16 @@
               "descricao": "Realizar o estudo do Modulo 1"
             },
             {
-              "id": 3,
-              "content": "Alterando o Campo teste",
-              "labels": [
-                "#7159c1"
-              ],
-              "user": "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg",
+              "id": 6,
+              "content": "Desenvolver um site para o Corinthians",
+              "labels": [],
+              "user": "https://avatars3.githubusercontent.com/u/50344535?s=460&v=4",
               "visible": true,
-              "descricao": "Realizar o estudo do Modulo 1"
+              "descricao": "Realizar o estudo do Modulo 217"
             },
             {
               "id": 4,
-              "content": "Gravar Aula NextJS: Utilizando server-side rendering com ReactJS",
+              "content": "Utilizar Hooks no portal de tarefas",
               "labels": [
                 "#54e1f7"
               ],
@@ -227,18 +205,20 @@
           "creatable": true,
           "cards": [
             {
-              "id": 6,
-              "content": "Esta mdulo 212 NodeJS",
-              "labels": [],
-              "user": "https://avatars3.githubusercontent.com/u/50344535?s=460&v=4",
+              "id": 3,
+              "content": "Ajustar Relátorio da ETEC ITU",
+              "labels": [
+                "#7159c1"
+              ],
+              "user": "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg",
               "visible": true,
-              "descricao": "Realizar o estudo do Modulo 217"
+              "descricao": ""
             },
             {
-              "id": 12,
-              "content": "Gravar testes e deploy ReactJS",
+              "id": 2,
+              "content": "Desenvolver aplicativo de controle de entregas",
               "labels": [
-                "#54e1f7"
+                "#7159c1"
               ],
               "user": "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg",
               "visible": true,
@@ -260,8 +240,28 @@
           "cards": [
             {
               "id": 10,
-              "content": "Gravar aula sobre deploy e CI com React Native",
+              "content": "Realizar integração com site da Etec ",
               "labels": [],
+              "visible": true,
+              "descricao": "Realizar o estudo do Modulo 1"
+            },
+            {
+              "id": 7,
+              "content": "Gravar sobre Geolocalização e mapas com React Native",
+              "labels": [
+                "#7159c1"
+              ],
+              "user": "https://avatars1.githubusercontent.com/u/50504236?s=460&v=4",
+              "visible": true,
+              "descricao": "Realizar o estudo do Modulo 1"
+            },
+            {
+              "id": 12,
+              "content": "Organizar o repositório",
+              "labels": [
+                "#54e1f7"
+              ],
+              "user": "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg",
               "visible": true,
               "descricao": "Realizar o estudo do Modulo 1"
             },
@@ -281,7 +281,7 @@
           "cards": [
             {
               "id": 1,
-              "content": "Estava módulo 02 de NodeJS",
+              "content": "Desenvolver novos components utilizando ReactJS para Biblioteca do Kardex",
               "labels": [
                 "#7159c1"
               ],

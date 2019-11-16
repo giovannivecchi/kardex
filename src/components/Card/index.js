@@ -1,11 +1,14 @@
 import React, { useState, useRef, useContext } from "react";
 import { useDrag, useDrop } from "react-dnd";
-import { Container, Label, TextArea } from "./styles";
+import { Container, Label, Subtitle, Titulo, Descricao } from "./styles";
 import axios from "axios";
 import BorderContext from "../Board/context";
 import Modal from "react-bootstrap/Modal";
 import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
+import IconSubject from "@material-ui/icons/Subject";
+import IconComment from "@material-ui/icons/Comment";
 import { useStyles } from "./styles";
 
 export default function Card({ board, data, index, listIndex }) {
@@ -69,11 +72,11 @@ export default function Card({ board, data, index, listIndex }) {
 
   const handleClose = () => {
     setShow(false);
-    setAlterar(false)
+    setAlterar(false);
   };
   const handleShow = () => {
     setShow(true);
-    setTitle("none")
+    setTitle("none");
   };
   const handleTitle = () => {
     setTitle(" 1px solid #FFF");
@@ -83,8 +86,8 @@ export default function Card({ board, data, index, listIndex }) {
   const baseUrl = "http://localhost:3001/board";
   const [initialState, setInitialState] = useState(data);
 
-  const clear = () => {    
-    setList( initialState );
+  const clear = () => {
+    setList(initialState);
     handleClose();
   };
 
@@ -100,7 +103,7 @@ export default function Card({ board, data, index, listIndex }) {
           setList(list);
 
           setInitialState(list);
-          setAlterar(false)
+          setAlterar(false);
         })
         .catch(err => {
           console.log(err);
@@ -114,7 +117,7 @@ export default function Card({ board, data, index, listIndex }) {
   };
 
   const updateField = e => {
-    setAlterar(true)
+    setAlterar(true);
     const card = { ...board };
 
     card.produce[listIndex].cards[index][e.target.name] = e.target.value;
@@ -138,39 +141,65 @@ export default function Card({ board, data, index, listIndex }) {
       >
         <form>
           <Modal.Header closeButton>
-            <Col xs={10} md={12} mt={12}>
+            <Col xs={10} md={11} mt={11}>
               <Modal.Title>
-                <TextArea
+                <Titulo
                   title={"Nome do Card"}
-                  border={title}
                   value={lists.content}
                   name="content"
                   onChange={e => {
                     updateField(e);
-                    handleTitle(e);
                   }}
-                ></TextArea>
+                ></Titulo>
               </Modal.Title>
             </Col>
           </Modal.Header>
           <Modal.Body>
-            <Col xs={12} md={12}>
-              <TextArea
-                border={title}
-                value={lists.descricao}
-                name="descricao"
-                onChange={e => {
-                  updateField(e);
-                  handleTitle(e);
-                }}
-              ></TextArea>
-            </Col>
+            <Row>
+              <Col xs={8} md={8} mt={8} style={{ border: "1px solid" }}>
+                <Row>
+                  <Col xs={12} md={12} mt={12}>
+                    <Subtitle>
+                      <IconSubject />
+                      Descrição
+                    </Subtitle>
+                  </Col>
+                </Row>
+                <Row>
+                  <Descricao
+                    value={lists.descricao}
+                    name="descricao"
+                    placeholder="Adicione uma descrição detalhada...."
+                    onChange={e => {
+                      updateField(e);
+                    }}
+                  ></Descricao>
+                </Row>
+                <Row>
+                  <Subtitle>
+                    <IconComment style={{ marginLeft: "11px" }} />
+                    Comentarios
+                  </Subtitle>
+                </Row>
+                <Row>
+                  
+                </Row>
+              </Col>
+              <Col
+                xs={4}
+                md={4}
+                mt={4}
+                style={{ border: "1px solid", float: "right" }}
+              >
+                Botoes
+              </Col>
+            </Row>
           </Modal.Body>
           <Modal.Footer>
-            <Button variant="secondary" onClick={e => save(e)}>
+            <Button variant="primary" onClick={e => save(e)}>
               Salvar
             </Button>
-            <Button variant="primary" onClick={e => clear()}>
+            <Button variant="secondary" onClick={e => clear()}>
               Cancelar
             </Button>
           </Modal.Footer>
