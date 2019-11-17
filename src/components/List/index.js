@@ -3,10 +3,7 @@ import { Container } from "./styles";
 import { MdAdd } from "react-icons/md";
 import Card from "../Card";
 
-export default function List({ board, data, index: listIndex }) {
-  const result = data;
-
-
+export default function List({ usuario, board, data, index: listIndex }) {
   const insertCard = () =>
   {
 
@@ -37,6 +34,7 @@ export default function List({ board, data, index: listIndex }) {
                 index={index}
                 data={card}
                 board={board}
+                usuario={usuario}
               />
             </>
           ))}

@@ -1,6 +1,18 @@
 import React, { useState, useRef, useContext } from "react";
 import { useDrag, useDrop } from "react-dnd";
-import { Container, Label, Subtitle, Titulo, Descricao } from "./styles";
+import {
+  Container,
+  Label,
+  Subtitle,
+  Titulo,
+  Descricao,
+  Img,
+  Comentario,
+  Line,
+  ImgComment,
+  QuadroComentario
+} from "./styles";
+
 import axios from "axios";
 import BorderContext from "../Board/context";
 import Modal from "react-bootstrap/Modal";
@@ -9,9 +21,11 @@ import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
 import IconSubject from "@material-ui/icons/Subject";
 import IconComment from "@material-ui/icons/Comment";
+import IconNearMe from "@material-ui/icons/NearMe";
+
 import { useStyles } from "./styles";
 
-export default function Card({ board, data, index, listIndex }) {
+export default function Card({ usuario, board, data, index, listIndex }) {
   const ref = useRef();
   const { move } = useContext(BorderContext);
 
@@ -67,7 +81,6 @@ export default function Card({ board, data, index, listIndex }) {
   const classes = useStyles();
 
   const [show, setShow] = useState(false);
-  const [title, setTitle] = useState("none");
   const [alterado, setAlterar] = useState(false);
 
   const handleClose = () => {
@@ -76,10 +89,6 @@ export default function Card({ board, data, index, listIndex }) {
   };
   const handleShow = () => {
     setShow(true);
-    setTitle("none");
-  };
-  const handleTitle = () => {
-    setTitle(" 1px solid #FFF");
   };
 
   const [lists, setList] = useState(data);
@@ -131,6 +140,25 @@ export default function Card({ board, data, index, listIndex }) {
   //   setList({ list: card });
   // };
 
+  const addComment = comments => {
+    if (comments) {
+      comments.map(function(comment) {
+        return (
+          <>
+            <Row>
+              <Col xs={1} md={1} mt={1}>
+                <ImgComment src={comment.imagem} alt="" />
+              </Col>
+              <Col xs={11} md={11} mt={11}>
+                {comment.username}
+              </Col>
+            </Row>
+          </>
+        );
+      });
+    }
+  };
+
   return (
     <>
       <Modal
@@ -156,7 +184,7 @@ export default function Card({ board, data, index, listIndex }) {
           </Modal.Header>
           <Modal.Body>
             <Row>
-              <Col xs={8} md={8} mt={8} style={{ border: "1px solid" }}>
+              <Col xs={8} md={8} mt={8}>
                 <Row>
                   <Col xs={12} md={12} mt={12}>
                     <Subtitle>
@@ -182,9 +210,41 @@ export default function Card({ board, data, index, listIndex }) {
                   </Subtitle>
                 </Row>
                 <Row>
-                  
+                  <Col xs={1} md={1} mt={1}>
+                    <Img src={usuario.imagem} alt="" />
+                  </Col>
+                  <Col xs={11} md={11} mt={11}>
+                    <Comentario placeholder="Escreva um comentário" />
+                  </Col>
                 </Row>
+                <Row>
+                  <Button
+                    size="sm"
+                    style={{ marginLeft: "67.2%", marginTop: "-1%" }}
+                    variant="outline-primary"
+                  >
+                    <IconNearMe fontSize="small" />
+                    Enviar
+                  </Button>
+                </Row>
+                <Row>
+                  <Line></Line>
+                </Row>
+                <QuadroComentario>
+                  {lists.comments !== undefined &&
+                    lists.comments.map(comment => (                      
+                      <Row>
+                      <Col xs={1} md={1} mt={1}>
+                        <ImgComment src={comment.imagem} alt="" />
+                      </Col>
+                      <Col xs={11} md={11} mt={11}>
+                        {comment.username}
+                      </Col>
+                    </Row>
+                    ))}
+                </QuadroComentario>
               </Col>
+
               <Col
                 xs={4}
                 md={4}

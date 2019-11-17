@@ -34,15 +34,29 @@ const initialState = {
   ]
 };
 
+const initialUser = {
+  usuario: {
+    id: 1,
+    email: "",
+    username: "",
+    imagem: ""
+  }
+};
+
 export default function Board() {
   const baseUrl = "http://localhost:3001/board";
+  const getUsuario = "http://localhost:3001/usuario";
   const [lists, setList] = useState(initialState.board[0].produce);
-  const [board, setBoard] = useState(initialState.board);
+  const [board, setBoard] = useState(initialState.board);  
+  const [usuario, setUsuario] = useState(initialUser.usuario);
 
   useEffect(() => {
     axios(baseUrl).then(resp => {
       setList(resp.data[1].produce);
       setBoard(resp.data[1]);
+    });
+    axios(getUsuario).then(resp => {
+      setUsuario(resp.data);
     });
   }, []);
 
@@ -74,7 +88,7 @@ export default function Board() {
     <BoardContext.Provider value={{ lists, move }}>
       <Container>
         {lists.map((list, index) => (
-          <List key={list.title} index={index} data={list} board={board} />
+          <List key={list.title} index={index} data={list} board={board} usuario={usuario} />
         ))}
       </Container>
     </BoardContext.Provider>

@@ -121,7 +121,8 @@ export const Descricao = styled.textarea`
   box-shadow: none;
   font-size: 14px;
   font-weight: 400;
-  border-color: rgba(9, 30, 66, 0.13);
+  margin-bottom: 1vh;
+  border-color: rgba(9, 30, 66, 0.33);
   :focus {
     ${contorno}
   }
@@ -136,6 +137,64 @@ export const Descricao = styled.textarea`
   text-rendering: auto;
   cursor: text;
 `;
+
+export const Img = styled.img`
+  height:36px;
+  width:36px;
+  margin: none;
+`;
+
+
+export const ImgComment = styled.img`
+  height:24px;
+  width:24px;
+  margin: none;
+  border-radius: 50%;
+`;
+
+export const Comentario = styled.textarea`
+  background: transparent;
+  border-radius: 3px;
+  margin-left: 0px;
+  box-shadow: none;
+  font-size: 14px;
+  font-weight: 400;
+  border-color: rgba(9, 30, 66, 0.33);
+  :focus {
+    ${contorno}
+  }
+  line-height: 24px;
+  min-height: 80px;
+  padding: 4px 8px;
+  resize: none;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  height: 80px;
+  width: 82%;
+  text-rendering: auto;
+  cursor: text;
+`;
+
+export const Line = styled.div`
+    border-top: 1px solid rgba(9, 30, 66, 0.33);
+    width: 81%;
+    height: 4%;
+    margin-left: 1%;
+    margin-top: 1%;
+    margin-bottom: 3%;
+`;
+
+export const QuadroComentario = styled.div`
+    border: 1px solid rgba(9, 30, 66, 0.33);
+    width: 81%;
+    height: 15%;
+    margin-left: 1%;
+    margin-top: 1%;
+    margin-bottom: 3%;
+    background-color: lightgray;
+`;
+
+
 
 export const useStyles = makeStyles(theme => ({
   paper: {

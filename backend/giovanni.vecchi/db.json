@@ -17,7 +17,8 @@
               ],
               "user": "https://avatars3.githubusercontent.com/u/50344535?s=460&v=4",
               "visible": true,
-              "descricao": "Realizar o estudo do Modulo 1"
+              "descricao": "Realizar o estudo do Modulo 1",
+              "comments": []
             },
             {
               "id": 2,
@@ -27,7 +28,8 @@
               ],
               "user": "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg",
               "visible": true,
-              "descricao": "Realizar o estudo do Modulo 1"
+              "descricao": "Realizar o estudo do Modulo 1",
+              "comments": []
             },
             {
               "id": 3,
@@ -37,7 +39,8 @@
               ],
               "user": "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg",
               "visible": true,
-              "descricao": "Realizar o estudo do Modulo 1"
+              "descricao": "Realizar o estudo do Modulo 1",
+              "comments": []
             },
             {
               "id": 4,
@@ -47,7 +50,8 @@
               ],
               "user": "https://avatars1.githubusercontent.com/u/50504236?s=460&v=4",
               "visible": true,
-              "descricao": "Realizar o estudo do Modulo 1"
+              "descricao": "Realizar o estudo do Modulo 1",
+              "comments": []
             },
             {
               "id": 1000,
@@ -57,7 +61,8 @@
               ],
               "user": "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg",
               "visible": false,
-              "descricao": "Realizar o estudo do Modulo 1"
+              "descricao": "Realizar o estudo do Modulo 1",
+              "comments": []
             }
           ]
         },
@@ -71,7 +76,8 @@
               "labels": [],
               "user": "https://avatars3.githubusercontent.com/u/50344535?s=460&v=4",
               "visible": true,
-              "descricao": "Realizar o estudo do Modulo 1"
+              "descricao": "Realizar o estudo do Modulo 1",
+              "comments": []
             },
             {
               "id": 14,
@@ -79,7 +85,8 @@
               "labels": [],
               "user": "https://avatars1.githubusercontent.com/u/50504236?s=460&v=4",
               "visible": false,
-              "descricao": "Realizar o estudo do Modulo 1"
+              "descricao": "Realizar o estudo do Modulo 1",
+              "comments": []
             }
           ]
         },
@@ -95,7 +102,8 @@
               ],
               "user": "https://avatars1.githubusercontent.com/u/50504236?s=460&v=4",
               "visible": true,
-              "descricao": "Realizar o estudo do Modulo 1"
+              "descricao": "Realizar o estudo do Modulo 1",
+              "comments": []
             },
             {
               "id": 8,
@@ -105,14 +113,16 @@
               ],
               "user": "https://avatars3.githubusercontent.com/u/50344535?s=460&v=4",
               "visible": true,
-              "descricao": "Realizar o estudo do Modulo 1"
+              "descricao": "Realizar o estudo do Modulo 1",
+              "comments": []
             },
             {
               "id": 9,
               "content": "Ajustes na biblioteca unform",
               "labels": [],
               "visible": false,
-              "descricao": "Realizar o estudo do Modulo 1"
+              "descricao": "Realizar o estudo do Modulo 1",
+              "comments": []
             }
           ]
         },
@@ -126,7 +136,8 @@
               "content": "Gravar aula sobre deploy e CI com React Native",
               "labels": [],
               "visible": true,
-              "descricao": "Realizar o estudo do Modulo 1"
+              "descricao": "Realizar o estudo do Modulo 1",
+              "comments": []
             },
             {
               "id": 12,
@@ -136,7 +147,8 @@
               ],
               "user": "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg",
               "visible": true,
-              "descricao": "Realizar o estudo do Modulo 1"
+              "descricao": "Realizar o estudo do Modulo 1",
+              "comments": []
             },
             {
               "id": 13,
@@ -145,7 +157,8 @@
                 "#7159c1"
               ],
               "visible": false,
-              "descricao": "Realizar o estudo do Modulo 1"
+              "descricao": "Realizar o estudo do Modulo 1",
+              "comments": []
             }
           ]
         }
@@ -168,7 +181,8 @@
               ],
               "user": "https://avatars3.githubusercontent.com/u/50344535?s=460&v=4",
               "visible": true,
-              "descricao": "Realizar o estudo do Modulo 1"
+              "descricao": "Realizar o estudo do Modulo 1",
+              "comments": []
             },
             {
               "id": 6,
@@ -176,7 +190,8 @@
               "labels": [],
               "user": "https://avatars3.githubusercontent.com/u/50344535?s=460&v=4",
               "visible": true,
-              "descricao": "Realizar o estudo do Modulo 217"
+              "descricao": "Realizar o estudo do Modulo 217",
+              "comments": []
             },
             {
               "id": 4,
@@ -186,7 +201,8 @@
               ],
               "user": "https://avatars1.githubusercontent.com/u/50504236?s=460&v=4",
               "visible": true,
-              "descricao": "Realizar o estudo do Modulo 1"
+              "descricao": "Realizar o estudo do Modulo 1",
+              "comments": []
             },
             {
               "id": 1000,
@@ -196,7 +212,8 @@
               ],
               "user": "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg",
               "visible": false,
-              "descricao": "Realizar o estudo do Modulo 1"
+              "descricao": "Realizar o estudo do Modulo 1",
+              "comments": []
             }
           ]
         },
@@ -212,7 +229,8 @@
               ],
               "user": "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg",
               "visible": true,
-              "descricao": ""
+              "descricao": "",
+              "comments": []
             },
             {
               "id": 2,
@@ -222,7 +240,16 @@
               ],
               "user": "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg",
               "visible": true,
-              "descricao": "Realizar o estudo do Modulo 1"
+              "descricao": "Realizar o estudo do Modulo 1",
+              "comments": [
+                {
+                  "id": 1,
+                  "username": "giovanni.vecchi",
+                  "imagem": "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg",
+                  "data": "16/11/2019",
+                  "comment": "Poderiamos utilizar o nosso nome para comentar no card, seria muito interessando utilizarmos nosso nome"
+                }
+              ]
             },
             {
               "id": 14,
@@ -230,7 +257,8 @@
               "labels": [],
               "user": "https://avatars1.githubusercontent.com/u/50504236?s=460&v=4",
               "visible": false,
-              "descricao": "Realizar o estudo do Modulo 1"
+              "descricao": "Realizar o estudo do Modulo 1",
+              "comments": []
             }
           ]
         },
@@ -243,7 +271,8 @@
               "content": "Realizar integração com site da Etec ",
               "labels": [],
               "visible": true,
-              "descricao": "Realizar o estudo do Modulo 1"
+              "descricao": "Realizar o estudo do Modulo 1",
+              "comments": []
             },
             {
               "id": 7,
@@ -253,7 +282,8 @@
               ],
               "user": "https://avatars1.githubusercontent.com/u/50504236?s=460&v=4",
               "visible": true,
-              "descricao": "Realizar o estudo do Modulo 1"
+              "descricao": "Realizar o estudo do Modulo 1",
+              "comments": []
             },
             {
               "id": 12,
@@ -263,14 +293,16 @@
               ],
               "user": "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg",
               "visible": true,
-              "descricao": "Realizar o estudo do Modulo 1"
+              "descricao": "Realizar o estudo do Modulo 1",
+              "comments": []
             },
             {
               "id": 9,
               "content": "Ajustes na biblioteca unform",
               "labels": [],
               "visible": false,
-              "descricao": "Realizar o estudo do Modulo 1"
+              "descricao": "Realizar o estudo do Modulo 1",
+              "comments": []
             }
           ]
         },
@@ -287,7 +319,8 @@
               ],
               "user": "https://avatars3.githubusercontent.com/u/50344535?s=460&v=4",
               "visible": true,
-              "descricao": "Realizar o estudo do Modulo 1"
+              "descricao": "Realizar o estudo do Modulo 1",
+              "comments": []
             },
             {
               "id": 13,
@@ -296,11 +329,18 @@
                 "#7159c1"
               ],
               "visible": false,
-              "descricao": "Realizar o estudo do Modulo 1"
+              "descricao": "Realizar o estudo do Modulo 1",
+              "comments": []
             }
           ]
         }
       ]
     }
-  ]
+  ],
+  "usuario": {
+    "id": 1,
+    "email": "giovanniovecchi@gmail.com",
+    "username": "giovanni.vecchi",
+    "imagem": "https://avatars1.githubusercontent.com/u/50504236?s=460&v=4"
+  }
 }
