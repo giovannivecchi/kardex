@@ -72,6 +72,15 @@ export const Label = styled.span`
   background: ${props => props.color};
 `;
 
+export const LabelUsuario = styled.span`
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 2px;
+  display: inline-block;
+  margin-top: -2px;
+  margin-left: 0px;
+`;
+
 export const Titulo = styled.textarea`
   background: transparent;
   border-radius: 3px;
@@ -152,7 +161,7 @@ export const ImgComment = styled.img`
   border-radius: 50%;
 `;
 
-export const Comentario = styled.textarea`
+export const Comentario = styled.input`
   background: transparent;
   border-radius: 3px;
   margin-left: 0px;
@@ -184,14 +193,22 @@ export const Line = styled.div`
     margin-bottom: 3%;
 `;
 
-export const QuadroComentario = styled.div`
-    border: 1px solid rgba(9, 30, 66, 0.33);
+export const QuadroComentario = styled.form`
+  
     width: 81%;
-    height: 15%;
     margin-left: 1%;
     margin-top: 1%;
     margin-bottom: 3%;
     background-color: lightgray;
+`;
+
+
+export const TextoComentario = styled.div`
+    border: 1px solid rgba(9, 30, 66, 0.33);
+    margin-bottom: 10px;
+    margin-top: 5px;
+    background-color: white;
+    border-radius: 3px;
 `;
 
 

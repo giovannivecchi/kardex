@@ -10,7 +10,9 @@ import {
   Comentario,
   Line,
   ImgComment,
-  QuadroComentario
+  QuadroComentario,
+  TextoComentario,
+  LabelUsuario
 } from "./styles";
 
 import axios from "axios";
@@ -24,6 +26,19 @@ import IconComment from "@material-ui/icons/Comment";
 import IconNearMe from "@material-ui/icons/NearMe";
 
 import { useStyles } from "./styles";
+
+const initialComments = {
+  id: null,
+  comentario: [
+    {
+      id: null,
+      username: "",
+      imagem: "",
+      data: "",
+      comment: ""
+    }
+  ]
+};
 
 export default function Card({ usuario, board, data, index, listIndex }) {
   const ref = useRef();
@@ -79,7 +94,10 @@ export default function Card({ usuario, board, data, index, listIndex }) {
   dragRef(dropRef(ref));
 
   const classes = useStyles();
-
+  const [comentarios, setComentarios] = useState(initialComments);
+  const [NewComentarios, setNewComentarios] = useState(
+    initialComments.comentario
+  );
   const [show, setShow] = useState(false);
   const [alterado, setAlterar] = useState(false);
 
@@ -89,6 +107,10 @@ export default function Card({ usuario, board, data, index, listIndex }) {
   };
   const handleShow = () => {
     setShow(true);
+    const getComentarios = `http://localhost:3001/comentarios/${lists.id}`;
+    axios(getComentarios).then(resp => {
+      setComentarios(resp.data);
+    });
   };
 
   const [lists, setList] = useState(data);
@@ -133,6 +155,58 @@ export default function Card({ usuario, board, data, index, listIndex }) {
     setList({ list: card });
   };
 
+  const saveComentarios = () => {
+    const sendComentarios = [...comentarios.comentario];
+    sendComentarios.unshift(NewComentarios);
+
+    const card = comentarios;
+    const method = card.id ? "put" : "post";
+    const url = "http://localhost:3001/comentarios";
+    const getComentarios = card.id ? `${url}/${card.id}` : url;
+    const envio = { id: card.id, comentario: sendComentarios };
+
+    axios[method](getComentarios, envio).then(resp => {
+      const comentario = resp.data;
+      console.log(comentario);
+      setComentarios(comentario);
+    });
+  };
+
+  const getUpdatedComentarios = card => {
+    const comentario = comentarios.comentario.filter(u => u.id !== card.id);
+    return comentario;
+  };
+
+  const updateComments = e => {
+    const comentario = {};
+    var data = new Date();
+
+    var maior = 0;
+    for (var i = 0; i < comentarios.comentario.length; i++) {
+      if (comentarios.comentario[i].id > maior) {
+        maior = comentarios.comentario[i].id;
+        console.log(comentarios.comentario[i].id);
+      }
+    }
+
+    comentario.id = maior++;
+    
+    comentario.username = usuario.username;
+    comentario.imagem = usuario.imagem;
+    comentario.data = data.getDate();
+    comentario[e.target.name] = e.target.value;
+    setNewComentarios(comentario);
+    console.log(comentario);
+    // newComentario.push(comentario)
+    //    setComentarios({comentario})
+  };
+
+  // const updateComments = e => {
+  //   const setComentarios = { ...comentarios };
+
+  //   setComentarios.[e.target.name] = e.target.value;
+  //   setList({ list: card });
+  // };
   // const updateLists = e => {
   //   const lists = { ...board };
 
@@ -140,24 +214,24 @@ export default function Card({ usuario, board, data, index, listIndex }) {
   //   setList({ list: card });
   // };
 
-  const addComment = comments => {
-    if (comments) {
-      comments.map(function(comment) {
-        return (
-          <>
-            <Row>
-              <Col xs={1} md={1} mt={1}>
-                <ImgComment src={comment.imagem} alt="" />
-              </Col>
-              <Col xs={11} md={11} mt={11}>
-                {comment.username}
-              </Col>
-            </Row>
-          </>
-        );
-      });
-    }
-  };
+  // const addComment = comments => {
+  //   if (comments) {
+  //     comments.map(function(comment) {
+  //       return (
+  //         <>
+  //           <Row>
+  //             <Col xs={1} md={1} mt={1}>
+  //               <ImgComment src={comment.imagem} alt="" />
+  //             </Col>
+  //             <Col xs={11} md={11} mt={11}>
+  //               {comment.username}
+  //             </Col>
+  //           </Row>
+  //         </>
+  //       );
+  //     });
+  //   }
+  // };
 
   return (
     <>
@@ -214,7 +288,13 @@ export default function Card({ usuario, board, data, index, listIndex }) {
                     <Img src={usuario.imagem} alt="" />
                   </Col>
                   <Col xs={11} md={11} mt={11}>
-                    <Comentario placeholder="Escreva um comentário" />
+                    <Comentario
+                      type="text"
+                      placeholder="Escreva um comentário"
+                      name="comment"
+                      value={comentarios.comentario.comment}
+                      onChange={e => updateComments(e)}
+                    />
                   </Col>
                 </Row>
                 <Row>
@@ -222,6 +302,9 @@ export default function Card({ usuario, board, data, index, listIndex }) {
                     size="sm"
                     style={{ marginLeft: "67.2%", marginTop: "-1%" }}
                     variant="outline-primary"
+                    onClick={e => {
+                      saveComentarios(e);
+                    }}
                   >
                     <IconNearMe fontSize="small" />
                     Enviar
@@ -231,16 +314,23 @@ export default function Card({ usuario, board, data, index, listIndex }) {
                   <Line></Line>
                 </Row>
                 <QuadroComentario>
-                  {lists.comments !== undefined &&
-                    lists.comments.map(comment => (                      
-                      <Row>
-                      <Col xs={1} md={1} mt={1}>
-                        <ImgComment src={comment.imagem} alt="" />
-                      </Col>
-                      <Col xs={11} md={11} mt={11}>
-                        {comment.username}
-                      </Col>
-                    </Row>
+                  {comentarios.comentario !== undefined && 
+                    comentarios.comentario.map(comment => (
+                      <TextoComentario>
+                        <Row>
+                          <Col xs={1} md={1} mt={1}>
+                            <ImgComment src={comment.imagem} alt="" />
+                          </Col>
+                          <Col xs={11} md={11} mt={11}>
+                            <LabelUsuario>{comment.username}</LabelUsuario>
+                          </Col>
+                        </Row>
+                        <Row>
+                          <Col xs={12} md={12} mt={12}>
+                            {comment.comment}
+                          </Col>
+                        </Row>
+                      </TextoComentario>
                     ))}
                 </QuadroComentario>
               </Col>
