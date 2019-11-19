@@ -29,7 +29,6 @@ export default createGlobalStyle`
     }
 
 `;
-
-// -webkit-font-smoothing: antialiased !important = deixar a font mais detalhada , retira a pixerização
-// list-style: none; = retira as bolinhas da lista
-//background: #ecf1f8;
+ /* -webkit-font-smoothing: antialiased !important = deixar a font mais detalhada , retira a pixerização
+ list-style: none; = retira as bolinhas da lista
+background: #ecf1f8; */

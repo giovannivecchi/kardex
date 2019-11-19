@@ -45,7 +45,7 @@ const initialUser = {
 
 export default function Board() {
   const baseUrl = "http://localhost:3001/board";
-  const getUsuario = "http://localhost:3001/usuario";
+  const getUsuario = "http://localhost:3001/usuarioLogado";
   const [lists, setList] = useState(initialState.board[0].produce);
   const [board, setBoard] = useState(initialState.board);  
   const [usuario, setUsuario] = useState(initialUser.usuario);

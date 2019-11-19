@@ -12,7 +12,8 @@ import {
   ImgComment,
   QuadroComentario,
   TextoComentario,
-  LabelUsuario
+  LabelUsuario,
+  LabelComentario
 } from "./styles";
 
 import axios from "axios";
@@ -24,6 +25,8 @@ import Button from "react-bootstrap/Button";
 import IconSubject from "@material-ui/icons/Subject";
 import IconComment from "@material-ui/icons/Comment";
 import IconNearMe from "@material-ui/icons/NearMe";
+import "date-fns";
+import TextField from "@material-ui/core/TextField";
 
 import { useStyles } from "./styles";
 
@@ -172,11 +175,6 @@ export default function Card({ usuario, board, data, index, listIndex }) {
     });
   };
 
-  const getUpdatedComentarios = card => {
-    const comentario = comentarios.comentario.filter(u => u.id !== card.id);
-    return comentario;
-  };
-
   const updateComments = e => {
     const comentario = {};
     var data = new Date();
@@ -185,53 +183,19 @@ export default function Card({ usuario, board, data, index, listIndex }) {
     for (var i = 0; i < comentarios.comentario.length; i++) {
       if (comentarios.comentario[i].id > maior) {
         maior = comentarios.comentario[i].id;
-        console.log(comentarios.comentario[i].id);
       }
     }
 
-    comentario.id = maior++;
-    
+    comentario.id = maior + 1;
+
     comentario.username = usuario.username;
     comentario.imagem = usuario.imagem;
     comentario.data = data.getDate();
     comentario[e.target.name] = e.target.value;
     setNewComentarios(comentario);
-    console.log(comentario);
-    // newComentario.push(comentario)
-    //    setComentarios({comentario})
   };
 
-  // const updateComments = e => {
-  //   const setComentarios = { ...comentarios };
-
-  //   setComentarios.[e.target.name] = e.target.value;
-  //   setList({ list: card });
-  // };
-  // const updateLists = e => {
-  //   const lists = { ...board };
-
-  //   lists.produce[listIndex].cards[index][e.target.name] = e.target.value;
-  //   setList({ list: card });
-  // };
-
-  // const addComment = comments => {
-  //   if (comments) {
-  //     comments.map(function(comment) {
-  //       return (
-  //         <>
-  //           <Row>
-  //             <Col xs={1} md={1} mt={1}>
-  //               <ImgComment src={comment.imagem} alt="" />
-  //             </Col>
-  //             <Col xs={11} md={11} mt={11}>
-  //               {comment.username}
-  //             </Col>
-  //           </Row>
-  //         </>
-  //       );
-  //     });
-  //   }
-  // };
+  var now = new Date();
 
   return (
     <>
@@ -258,7 +222,7 @@ export default function Card({ usuario, board, data, index, listIndex }) {
           </Modal.Header>
           <Modal.Body>
             <Row>
-              <Col xs={8} md={8} mt={8}>
+              <Col xs={12} md={12} mt={12} style={{ marginLeft: "4vw" }}>
                 <Row>
                   <Col xs={12} md={12} mt={12}>
                     <Subtitle>
@@ -267,7 +231,7 @@ export default function Card({ usuario, board, data, index, listIndex }) {
                     </Subtitle>
                   </Col>
                 </Row>
-                <Row>
+                <Row style={{ marginBottom: "3vh" }}>
                   <Descricao
                     value={lists.descricao}
                     name="descricao"
@@ -277,9 +241,35 @@ export default function Card({ usuario, board, data, index, listIndex }) {
                     }}
                   ></Descricao>
                 </Row>
-                <Row>
+                <Row style={{ marginBottom: "3vh" }}>
+                  <Col xs={3} md={3} mt={3} style={{ textAlign: "left" }}>
+                    <TextField
+                      id="date"
+                      label="Previsão de Entrega"
+                      type="date"
+                      defaultValue={`${now.getFullYear()}-${now.getMonth() +
+                        1}-${now.getDate()}`}
+                      InputLabelProps={{
+                        shrink: true
+                      }}
+                    />
+                  </Col>
+                  <Col xs={9} md={9} mt={9} style={{ textAlign: "left" }}>
+                    <TextField
+                      id="date"
+                      label="Data de Entrega"
+                      type="date"
+                      defaultValue={`${now.getFullYear()}-${now.getMonth() +
+                        1}-${now.getDate()}`}
+                      InputLabelProps={{
+                        shrink: true
+                      }}
+                    />
+                  </Col>
+                </Row>
+                <Row style={{marginBottom: "1vh"}}>
                   <Subtitle>
-                    <IconComment style={{ marginLeft: "11px" }} />
+                    <IconComment style={{ marginLeft: "10px" }} />
                     Comentarios
                   </Subtitle>
                 </Row>
@@ -287,7 +277,7 @@ export default function Card({ usuario, board, data, index, listIndex }) {
                   <Col xs={1} md={1} mt={1}>
                     <Img src={usuario.imagem} alt="" />
                   </Col>
-                  <Col xs={11} md={11} mt={11}>
+                  <Col xs={11} md={11} mt={11} style={{ textAlign: "left" }}>
                     <Comentario
                       type="text"
                       placeholder="Escreva um comentário"
@@ -300,7 +290,7 @@ export default function Card({ usuario, board, data, index, listIndex }) {
                 <Row>
                   <Button
                     size="sm"
-                    style={{ marginLeft: "67.2%", marginTop: "-1%" }}
+                    style={{ marginLeft: "71.4%", marginTop: "0%" }}
                     variant="outline-primary"
                     onClick={e => {
                       saveComentarios(e);
@@ -314,7 +304,7 @@ export default function Card({ usuario, board, data, index, listIndex }) {
                   <Line></Line>
                 </Row>
                 <QuadroComentario>
-                  {comentarios.comentario !== undefined && 
+                  {comentarios.comentario !== undefined &&
                     comentarios.comentario.map(comment => (
                       <TextoComentario>
                         <Row>
@@ -325,23 +315,19 @@ export default function Card({ usuario, board, data, index, listIndex }) {
                             <LabelUsuario>{comment.username}</LabelUsuario>
                           </Col>
                         </Row>
-                        <Row>
-                          <Col xs={12} md={12} mt={12}>
-                            {comment.comment}
+                        <Row style={{ marginBottom: "2vh" }}>
+                          <Col
+                            xs={12}
+                            md={12}
+                            mt={12}
+                            style={{ marginTop: "1vh", marginLeft: "1vw" }}
+                          >
+                            <LabelComentario>{comment.comment}</LabelComentario>
                           </Col>
                         </Row>
                       </TextoComentario>
                     ))}
                 </QuadroComentario>
-              </Col>
-
-              <Col
-                xs={4}
-                md={4}
-                mt={4}
-                style={{ border: "1px solid", float: "right" }}
-              >
-                Botoes
               </Col>
             </Row>
           </Modal.Body>

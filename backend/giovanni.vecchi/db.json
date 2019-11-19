@@ -174,6 +174,51 @@
           "creatable": true,
           "cards": [
             {
+              "id": 10,
+              "content": "Realizar integração com site da Etec ",
+              "labels": [],
+              "visible": true,
+              "descricao": "Realizar o estudo do Modulo 1",
+              "comments": []
+            },
+            {
+              "id": 12,
+              "content": "Organizar o repositório",
+              "labels": [
+                "#54e1f7"
+              ],
+              "user": "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg",
+              "visible": true,
+              "descricao": "Realizar o estudo do Modulo 1",
+              "comments": []
+            },
+            {
+              "id": 2,
+              "content": "Desenvolver aplicativo de controle de entregas",
+              "labels": [
+                "#7159c1"
+              ],
+              "user": "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg",
+              "visible": true,
+              "descricao": "Realizar o estudo do Modulo 1 iojifdiosjdf",
+              "comments": [
+                {
+                  "id": 1,
+                  "username": "desconhecido",
+                  "imagem": "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg",
+                  "data": "16/11/2019",
+                  "comment": "Poderiamos utilizar o nosso nome para comentar no card, seria muito interessando utilizarmos nosso nome"
+                },
+                {
+                  "id": 1,
+                  "username": "giovanni.vecchi",
+                  "imagem": "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg",
+                  "data": "16/11/2019",
+                  "comment": "Poderiamos utilizar o nosso nome para comentar no card, seria muito interessando utilizarmos nosso nome"
+                }
+              ]
+            },
+            {
               "id": 8,
               "content": "Gravar testes e deploy ReactJS",
               "labels": [
@@ -222,6 +267,17 @@
           "creatable": true,
           "cards": [
             {
+              "id": 7,
+              "content": "Gravar sobre Geolocalização e mapas com React Native",
+              "labels": [
+                "#7159c1"
+              ],
+              "user": "https://avatars1.githubusercontent.com/u/50504236?s=460&v=4",
+              "visible": true,
+              "descricao": "Realizar o estudo do Modulo 1",
+              "comments": []
+            },
+            {
               "id": 3,
               "content": "Ajustar Relátorio da ETEC ITU",
               "labels": [
@@ -231,32 +287,6 @@
               "visible": true,
               "descricao": "",
               "comments": []
-            },
-            {
-              "id": 2,
-              "content": "Desenvolver aplicativo de controle de entregas",
-              "labels": [
-                "#7159c1"
-              ],
-              "user": "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg",
-              "visible": true,
-              "descricao": "Realizar o estudo do Modulo 1 ",
-              "comments": [
-                {
-                  "id": 1,
-                  "username": "desconhecido",
-                  "imagem": "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg",
-                  "data": "16/11/2019",
-                  "comment": "Poderiamos utilizar o nosso nome para comentar no card, seria muito interessando utilizarmos nosso nome"
-                },
-                {
-                  "id": 1,
-                  "username": "giovanni.vecchi",
-                  "imagem": "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg",
-                  "data": "16/11/2019",
-                  "comment": "Poderiamos utilizar o nosso nome para comentar no card, seria muito interessando utilizarmos nosso nome"
-                }
-              ]
             },
             {
               "id": 14,
@@ -274,31 +304,12 @@
           "creatable": true,
           "cards": [
             {
-              "id": 10,
-              "content": "Realizar integração com site da Etec ",
-              "labels": [],
-              "visible": true,
-              "descricao": "Realizar o estudo do Modulo 1",
-              "comments": []
-            },
-            {
-              "id": 7,
-              "content": "Gravar sobre Geolocalização e mapas com React Native",
+              "id": 1,
+              "content": "Desenvolver novos components utilizando ReactJS para Biblioteca do Kardex",
               "labels": [
                 "#7159c1"
               ],
-              "user": "https://avatars1.githubusercontent.com/u/50504236?s=460&v=4",
-              "visible": true,
-              "descricao": "Realizar o estudo do Modulo 1",
-              "comments": []
-            },
-            {
-              "id": 12,
-              "content": "Organizar o repositório",
-              "labels": [
-                "#54e1f7"
-              ],
-              "user": "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg",
+              "user": "https://avatars3.githubusercontent.com/u/50344535?s=460&v=4",
               "visible": true,
               "descricao": "Realizar o estudo do Modulo 1",
               "comments": []
@@ -319,17 +330,6 @@
           "done": false,
           "cards": [
             {
-              "id": 1,
-              "content": "Desenvolver novos components utilizando ReactJS para Biblioteca do Kardex",
-              "labels": [
-                "#7159c1"
-              ],
-              "user": "https://avatars3.githubusercontent.com/u/50344535?s=460&v=4",
-              "visible": true,
-              "descricao": "Realizar o estudo do Modulo 1",
-              "comments": []
-            },
-            {
               "id": 13,
               "content": "Gravar Aula Internacionalização de aplicações Node.js, ReactJS e React Native",
               "labels": [
@@ -344,16 +344,70 @@
       ]
     }
   ],
-  "usuario": {
+  "usuarioLogado": {
     "id": 1,
-    "email": "giovanniovecchi@gmail.com",
+    "email": "giovanni.vecchi@gmail.com",
     "username": "giovanni.vecchi",
     "imagem": "https://avatars1.githubusercontent.com/u/50504236?s=460&v=4"
   },
+  "usuario": [
+    {
+      "username": "Pedro Fernandes",
+      "email": "contato.phfernandes@gmail.com",
+      "password": "12345",
+      "id": 1
+    },
+    {
+      "username": "Giovanni Vechi",
+      "email": "giovanni@gmail.com",
+      "password": "123456",
+      "id": 2
+    },
+    {
+      "username": "angelo",
+      "email": "angelo@gmail.com",
+      "password": "123456",
+      "id": 3
+    },
+    {
+      "username": "",
+      "email": "contsdfsdfsdf",
+      "password": "",
+      "id": 4
+    }
+  ],
   "comentarios": [
     {
       "id": 2,
       "comentario": [
+        {
+          "id": 6,
+          "username": "giovanni.vecchi",
+          "imagem": "https://avatars1.githubusercontent.com/u/50504236?s=460&v=4",
+          "data": 18,
+          "comment": "hrthrth"
+        },
+        {
+          "id": 5,
+          "username": "giovanni.vecchi",
+          "imagem": "https://avatars1.githubusercontent.com/u/50504236?s=460&v=4",
+          "data": 18,
+          "comment": "sdfsdfsfd"
+        },
+        {
+          "id": 5,
+          "username": "giovanni.vecchi",
+          "imagem": "https://avatars1.githubusercontent.com/u/50504236?s=460&v=4",
+          "data": 18,
+          "comment": "sdfsdfsfd"
+        },
+        {
+          "id": 4,
+          "username": "giovanni.vecchi",
+          "imagem": "https://avatars1.githubusercontent.com/u/50504236?s=460&v=4",
+          "data": 18,
+          "comment": "teste novo"
+        },
         {
           "id": 3,
           "username": "giovanni.vecchi",
@@ -394,6 +448,41 @@
     {
       "id": 3,
       "comentario": [
+        {
+          "id": 1,
+          "username": "giovanni.vecchi",
+          "imagem": "https://avatars1.githubusercontent.com/u/50504236?s=460&v=4",
+          "data": 18,
+          "comment": "vai corinthians1"
+        },
+        {
+          "id": 0,
+          "username": "giovanni.vecchi",
+          "imagem": "https://avatars1.githubusercontent.com/u/50504236?s=460&v=4",
+          "data": 18,
+          "comment": "gfdgdfgdfg"
+        },
+        {
+          "id": 0,
+          "username": "giovanni.vecchi",
+          "imagem": "https://avatars1.githubusercontent.com/u/50504236?s=460&v=4",
+          "data": 18,
+          "comment": "fijsidjfisdfji"
+        },
+        {
+          "id": 0,
+          "username": "giovanni.vecchi",
+          "imagem": "https://avatars1.githubusercontent.com/u/50504236?s=460&v=4",
+          "data": 18,
+          "comment": "ajsmdoajsdoiajsiod"
+        },
+        {
+          "id": 0,
+          "username": "giovanni.vecchi",
+          "imagem": "https://avatars1.githubusercontent.com/u/50504236?s=460&v=4",
+          "data": 18,
+          "comment": "vai corinthians"
+        },
         {
           "id": 0,
           "username": "giovanni.vecchi",
@@ -457,6 +546,25 @@
           "imagem": "https://avatars1.githubusercontent.com/u/50504236?s=460&v=4",
           "data": 17,
           "comment": "teste"
+        },
+        {
+          "id": null,
+          "username": "",
+          "imagem": "",
+          "data": "",
+          "comment": ""
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "comentario": [
+        {
+          "id": 1,
+          "username": "giovanni.vecchi",
+          "imagem": "https://avatars1.githubusercontent.com/u/50504236?s=460&v=4",
+          "data": 18,
+          "comment": "dasasd"
         },
         {
           "id": null,

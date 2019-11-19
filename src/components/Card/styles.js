@@ -58,6 +58,7 @@ export const Container = styled.div`
     css`
       opacity: 0;
       height: 0px;
+      cursor: default;
       header {
         height: 0px;
       }
@@ -73,12 +74,26 @@ export const Label = styled.span`
 `;
 
 export const LabelUsuario = styled.span`
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   border-radius: 2px;
   display: inline-block;
-  margin-top: -2px;
+  margin-top: 1.5vh;
+  margin-left: -2px;
+  color: blue;
+`;
+
+
+export const LabelComentario = styled.div`
+  @import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 2px;
+  font-family: "Poppins", sans-serif;
+  display: inline-block;
+  margin-top: 1.5vh;
   margin-left: 0px;
+  color: black;
 `;
 
 export const Titulo = styled.textarea`
@@ -150,21 +165,24 @@ export const Descricao = styled.textarea`
 export const Img = styled.img`
   height:36px;
   width:36px;
-  margin: none;
+  margin: 0px;
 `;
 
 
 export const ImgComment = styled.img`
-  height:24px;
-  width:24px;
-  margin: none;
+  height:36px;
+  width:36px;
+  margin-left: 2px;
+  margin-bottom: 3px;
   border-radius: 50%;
 `;
 
-export const Comentario = styled.input`
+export const Comentario = styled.textarea`
   background: transparent;
   border-radius: 3px;
-  margin-left: 0px;
+  margin-left: -1vw;
+  display: flex;  
+  align-items: left;
   box-shadow: none;
   font-size: 14px;
   font-weight: 400;
@@ -172,14 +190,12 @@ export const Comentario = styled.input`
   :focus {
     ${contorno}
   }
-  line-height: 24px;
   min-height: 80px;
-  padding: 4px 8px;
   resize: none;
   overflow: hidden;
   overflow-wrap: break-word;
   height: 80px;
-  width: 82%;
+  width: 83%;
   text-rendering: auto;
   cursor: text;
 `;
@@ -199,7 +215,6 @@ export const QuadroComentario = styled.form`
     margin-left: 1%;
     margin-top: 1%;
     margin-bottom: 3%;
-    background-color: lightgray;
 `;
 
 
@@ -209,6 +224,7 @@ export const TextoComentario = styled.div`
     margin-top: 5px;
     background-color: white;
     border-radius: 3px;
+    box-shadow: 0 3px 7px 3px rgba(192, 208, 230, 1);
 `;
 
 
