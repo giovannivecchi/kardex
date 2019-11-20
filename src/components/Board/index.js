@@ -23,7 +23,7 @@ const initialState = {
               content: "Estudar módulo 01 de NodeJS",
               labels: ["#7159c1"],
               user:
-                "https://avatars3.githubusercontent.com/u/50344535?s=460&v=4",
+                ["https://avatars3.githubusercontent.com/u/50344535?s=460&v=4"],
               visible: false,
               descricao: "Realizar o estudo do Modulo 1"
             }
@@ -52,8 +52,8 @@ export default function Board() {
 
   useEffect(() => {
     axios(baseUrl).then(resp => {
-      setList(resp.data[1].produce);
-      setBoard(resp.data[1]);
+      setList(resp.data[0].produce);
+      setBoard(resp.data[0]);
     });
     axios(getUsuario).then(resp => {
       setUsuario(resp.data);

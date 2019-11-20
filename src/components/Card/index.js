@@ -13,7 +13,8 @@ import {
   QuadroComentario,
   TextoComentario,
   LabelUsuario,
-  LabelComentario
+  LabelComentario,
+  Header
 } from "./styles";
 
 import axios from "axios";
@@ -25,6 +26,8 @@ import Button from "react-bootstrap/Button";
 import IconSubject from "@material-ui/icons/Subject";
 import IconComment from "@material-ui/icons/Comment";
 import IconNearMe from "@material-ui/icons/NearMe";
+import IconCheckBox from "@material-ui/icons/CheckBoxOutlineBlank";
+
 import "date-fns";
 import TextField from "@material-ui/core/TextField";
 
@@ -221,6 +224,24 @@ export default function Card({ usuario, board, data, index, listIndex }) {
             </Col>
           </Modal.Header>
           <Modal.Body>
+            <Row style={{ marginBottom: "2vh" }}>
+              <Col xs={3} md={3} mt={3}>
+                {data.labels.map(label => (
+                  <Label key={label} color={label} />
+                ))}
+
+                <Button
+                  size="sm"
+                  variant="outline-primary"
+                  onClick={console.log("Click")}
+                >
+                  <IconCheckBox fontSize="small" />
+                </Button>
+              </Col>
+              <Col xs={3} md={3} mt={3}>
+                <button>Membros</button>
+              </Col>
+            </Row>
             <Row>
               <Col xs={12} md={12} mt={12} style={{ marginLeft: "4vw" }}>
                 <Row>
@@ -254,7 +275,7 @@ export default function Card({ usuario, board, data, index, listIndex }) {
                       }}
                     />
                   </Col>
-                  <Col xs={9} md={9} mt={9} style={{ textAlign: "left" }}>
+                  <Col xs={3} md={3} mt={3} style={{ float: "left" }}>
                     <TextField
                       id="date"
                       label="Data de Entrega"
@@ -266,8 +287,19 @@ export default function Card({ usuario, board, data, index, listIndex }) {
                       }}
                     />
                   </Col>
+                  <Col xs={3} md={3} mt={3} style={{ float: "left" }}>
+                    <TextField
+                      id="adicionais"
+                      label="Dados Adicionais"
+                      type="text"
+                      InputLabelProps={{
+                        shrink: true
+                      }}
+                    />
+                  </Col>
                 </Row>
-                <Row style={{marginBottom: "1vh"}}>
+
+                <Row style={{ marginBottom: "1vh" }}>
                   <Subtitle>
                     <IconComment style={{ marginLeft: "10px" }} />
                     Comentarios
@@ -344,14 +376,16 @@ export default function Card({ usuario, board, data, index, listIndex }) {
       <div onClick={handleShow}>
         {data.visible && <p>{data.visible}</p>}
         <Container ref={ref} isDragging={isDragging} isVisible={data.visible}>
-          <header>
+          <Header>
             {data.labels.map(label => (
               <Label key={label} color={label} />
             ))}
-          </header>
+          </Header>
 
           <p>{data.content}</p>
-          {data.user && <img src={data.user} alt="" />}
+          {data.user.map(user => (
+            <Img src={user} alt="" />
+          ))}      
         </Container>
       </div>
     </>

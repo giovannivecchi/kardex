@@ -19,15 +19,16 @@ export const Container = styled.div`
   }
 
   header {
-    position: absolute;
-    top: -12px;
-    left: 90%;
-    width: 100px;
+    position: absolute;        
+    margin-top: -2vh;            
+    display: flex;
+    align-items: flex-start;
   }
 
   p {
     font-weight: 500;
     line-height: 20px;
+    margin-top: 1vh;
   }
 
   img {
@@ -66,12 +67,19 @@ export const Container = styled.div`
 `;
 
 export const Label = styled.span`
-  width: 10px;
+  width: 20px;
   height: 10px;
-  border-radius: 2px;
-  display: inline-block;
+  border-radius: 2px;  
+  margin-bottom: 4vh;  
   background: ${props => props.color};
 `;
+
+export const Header = styled.header`
+   display: flex;
+   align-items: flex-start;
+   margin: 0 0 0 0 ;
+`
+
 
 export const LabelUsuario = styled.span`
   font-size: 14px;
@@ -165,7 +173,7 @@ export const Descricao = styled.textarea`
 export const Img = styled.img`
   height:36px;
   width:36px;
-  margin: 0px;
+  margin-left: 1px;
 `;
 
 
