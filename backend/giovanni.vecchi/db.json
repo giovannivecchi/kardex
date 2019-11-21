@@ -14,21 +14,26 @@
               "content": "Estudar módulo 01 de NodeJS",
               "labels": [
                 "#7159c1",
-                "#B22222"
+                "#B22222",
+                "#F1F111",
+                "#39fc03",
+                "#03cefc",
+                "#7b03fc"
               ],
               "user": [
                 "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg",
                 "https://avatars3.githubusercontent.com/u/50344535?s=460&v=4"
               ],
               "visible": true,
-              "descricao": "Realizar o estudo do Modulo 1",
+              "descricao": "Realizar o estudo do Modulo 1 teste",
               "comments": []
             },
             {
               "id": 2,
               "content": "Criar vídeo para o Youtube ensinando a recriar a interface do Pipefy",
               "labels": [
-                "#7159c1"
+                "#7159c1",
+                "#B11"
               ],
               "user": [
                 "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg"
@@ -349,6 +354,20 @@
       "id": 4,
       "comentario": [
         {
+          "id": 1,
+          "username": "giovanni.vecchi",
+          "imagem": "https://avatars1.githubusercontent.com/u/50504236?s=460&v=4",
+          "data": 20,
+          "comment": "teste"
+        },
+        {
+          "id": 1,
+          "username": "giovanni.vecchi",
+          "imagem": "https://avatars1.githubusercontent.com/u/50504236?s=460&v=4",
+          "data": 20,
+          "comment": "teste"
+        },
+        {
           "id": 0,
           "username": "giovanni.vecchi",
           "imagem": "https://avatars1.githubusercontent.com/u/50504236?s=460&v=4",
@@ -386,6 +405,13 @@
     {
       "id": 6,
       "comentario": [
+        {
+          "id": 1,
+          "username": "giovanni.vecchi",
+          "imagem": "https://avatars1.githubusercontent.com/u/50504236?s=460&v=4",
+          "data": 20,
+          "comment": "teste3"
+        },
         {
           "id": 0,
           "username": "giovanni.vecchi",

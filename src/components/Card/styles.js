@@ -74,6 +74,38 @@ export const Label = styled.span`
   background: ${props => props.color};
 `;
 
+export const LabelCard = styled.div`  
+    box-sizing: border-box;
+    display: block;
+    float: left;
+    font-weight: 600;
+    height: 32px;
+    line-height: 32px;  
+    margin: 0 4px 4px 0;
+    min-width: 40px;
+    padding: 0 12px;
+    width: auto;
+  background: ${props => props.color};
+`;
+
+export const Tag = styled.div`  
+    box-sizing: border-box;
+    display: block;
+    float: left;
+    font-weight: 600;
+    width: 100px;
+    height: 21px;
+    color: white;
+    border-radius: 3px;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    box-shadow: 0 9px 7px 3px rgba(192, 208, 230, 0.2);
+    margin-bottom: 1vh;
+    text-align: center;
+  background: ${props => props.color};
+`;
+
+
 export const Header = styled.header`
    display: flex;
    align-items: flex-start;

@@ -14,7 +14,9 @@ import {
   TextoComentario,
   LabelUsuario,
   LabelComentario,
-  Header
+  Header,
+  LabelCard,
+  Tag
 } from "./styles";
 
 import axios from "axios";
@@ -23,11 +25,12 @@ import Modal from "react-bootstrap/Modal";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
+import Overlay from "react-bootstrap/Overlay";
+import Popover from "react-bootstrap/Popover";
+
 import IconSubject from "@material-ui/icons/Subject";
 import IconComment from "@material-ui/icons/Comment";
 import IconNearMe from "@material-ui/icons/NearMe";
-import IconCheckBox from "@material-ui/icons/CheckBoxOutlineBlank";
-
 import "date-fns";
 import TextField from "@material-ui/core/TextField";
 
@@ -105,6 +108,7 @@ export default function Card({ usuario, board, data, index, listIndex }) {
     initialComments.comentario
   );
   const [show, setShow] = useState(false);
+
   const [alterado, setAlterar] = useState(false);
 
   const handleClose = () => {
@@ -119,6 +123,14 @@ export default function Card({ usuario, board, data, index, listIndex }) {
     });
   };
 
+  const [showModal, setShowModal] = useState(false);
+  const [target, setTarget] = useState(null);
+
+  const handleClickModal = event => {
+    setShowModal(!showModal);
+    setTarget(event.target);
+  };
+
   const [lists, setList] = useState(data);
   const baseUrl = "http://localhost:3001/board";
   const [initialState, setInitialState] = useState(data);
@@ -131,7 +143,7 @@ export default function Card({ usuario, board, data, index, listIndex }) {
   const save = () => {
     if (alterado !== false) {
       const card = lists;
-
+      console.log(lists);
       const method = "put";
       const url = data.id ? `${baseUrl}/${board.id}` : baseUrl;
       axios[method](url, card.list)
@@ -200,6 +212,22 @@ export default function Card({ usuario, board, data, index, listIndex }) {
 
   var now = new Date();
 
+  const AddEtiqueta = color => {
+    const tags = board;
+
+    if (tags.produce[listIndex].cards[index].labels.indexOf(color) !== -1) {
+      tags.produce[listIndex].cards[index].labels.splice(
+        tags.produce[listIndex].cards[index].labels.indexOf(color),
+        1
+      );
+    } else {
+      tags.produce[listIndex].cards[index].labels.push(color);
+    }
+    console.log(tags);
+    setList({ list: tags });
+    setAlterar(true);
+  };
+
   return (
     <>
       <Modal
@@ -224,23 +252,96 @@ export default function Card({ usuario, board, data, index, listIndex }) {
             </Col>
           </Modal.Header>
           <Modal.Body>
-            <Row style={{ marginBottom: "2vh" }}>
-              <Col xs={3} md={3} mt={3}>
-                {data.labels.map(label => (
-                  <Label key={label} color={label} />
-                ))}
+            <Overlay
+              show={showModal}
+              target={target}
+              placement="right"
+              container={ref.current}
+              containerPadding={20}
+            >
+              <Popover id="popover-contained">
+                <Popover.Title style={{ color: "black" }} as="h3">
+                  Etiquetas
+                </Popover.Title>
+                <Popover.Content>
+                  <Row>
+                    <Tag
+                      color={"#B11"}
+                      onClick={e => {
+                        AddEtiqueta("#B11");
+                        handleClickModal(e);
+                      }}
+                    >
+                      Urgente
+                    </Tag>
+                  </Row>
+                  <Row>
+                    <Tag
+                      color={"#F1F111"}
+                      onClick={e => {
+                        AddEtiqueta("#F1F111");
+                        handleClickModal(e);
+                      }}
+                    >
+                     Pausado
+                    </Tag>
+                  </Row>
+                  <Row>
+                    <Tag
+                      color={"#39fc03"}
+                      onClick={e => {
+                        AddEtiqueta("#39fc03");
+                        handleClickModal(e);
+                      }}
+                    >
+                     Concluído
+                    </Tag>
+                  </Row>
+                  <Row>
+                    <Tag
+                      color={"#03cefc"}
+                      onClick={e => {
+                        AddEtiqueta("#03cefc");
+                        handleClickModal(e);
+                      }}
+                    >
+                     Correção
+                    </Tag>
+                  </Row>
+                  <Row>
+                    <Tag
+                      color={"#7b03fc"}
+                      onClick={e => {
+                        AddEtiqueta("#7b03fc");
+                        handleClickModal(e);
+                      }}
+                    >
+                      Importante
+                    </Tag>
+                  </Row>
+                </Popover.Content>
+              </Popover>
+            </Overlay>
 
+            <Row style={{ marginBottom: "2vh" }}>
+              <Col xs={12} md={12} mt={12} style={{ marginLeft: "3vw" }}>
+                {data.labels.map(label => (
+                  <LabelCard key={label} color={label} />
+                ))}
                 <Button
-                  size="sm"
-                  variant="outline-primary"
-                  onClick={console.log("Click")}
+                  ref={ref}
+                  variant="info"
+                  style={{
+                    textAlign: "center",
+                    borderRadius: "10px",
+                    marginTop: "-0.5vh"
+                  }}
+                  onClick={handleClickModal}
                 >
-                  <IconCheckBox fontSize="small" />
+                  +
                 </Button>
               </Col>
-              <Col xs={3} md={3} mt={3}>
-                <button>Membros</button>
-              </Col>
+              <Col xs={3} md={3} mt={3}></Col>
             </Row>
             <Row>
               <Col xs={12} md={12} mt={12} style={{ marginLeft: "4vw" }}>
@@ -385,7 +486,7 @@ export default function Card({ usuario, board, data, index, listIndex }) {
           <p>{data.content}</p>
           {data.user.map(user => (
             <Img src={user} alt="" />
-          ))}      
+          ))}
         </Container>
       </div>
     </>
