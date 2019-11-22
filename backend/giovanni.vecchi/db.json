@@ -17,8 +17,8 @@
                 "#B22222",
                 "#F1F111",
                 "#39fc03",
-                "#03cefc",
-                "#7b03fc"
+                "#7b03fc",
+                "#B11"
               ],
               "user": [
                 "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg",
@@ -26,20 +26,6 @@
               ],
               "visible": true,
               "descricao": "Realizar o estudo do Modulo 1 teste",
-              "comments": []
-            },
-            {
-              "id": 2,
-              "content": "Criar vídeo para o Youtube ensinando a recriar a interface do Pipefy",
-              "labels": [
-                "#7159c1",
-                "#B11"
-              ],
-              "user": [
-                "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg"
-              ],
-              "visible": true,
-              "descricao": "Realizar o estudo do Modulo 1",
               "comments": []
             },
             {
@@ -63,6 +49,20 @@
               ],
               "user": [
                 "https://avatars1.githubusercontent.com/u/50504236?s=460&v=4"
+              ],
+              "visible": true,
+              "descricao": "Realizar o estudo do Modulo 1",
+              "comments": []
+            },
+            {
+              "id": 2,
+              "content": "Criar vídeo para o Youtube ensinando a recriar a interface do Pipefy",
+              "labels": [
+                "#7159c1",
+                "#B11"
+              ],
+              "user": [
+                "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg"
               ],
               "visible": true,
               "descricao": "Realizar o estudo do Modulo 1",
@@ -116,13 +116,13 @@
           "creatable": true,
           "cards": [
             {
-              "id": 7,
-              "content": "Gravar sobre Geolocalização e mapas com React Native",
+              "id": 12,
+              "content": "Gravar testes e deploy ReactJS",
               "labels": [
-                "#7159c1"
+                "#54e1f7"
               ],
               "user": [
-                "https://avatars1.githubusercontent.com/u/50504236?s=460&v=4"
+                "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg"
               ],
               "visible": true,
               "descricao": "Realizar o estudo do Modulo 1",
@@ -136,6 +136,19 @@
               ],
               "user": [
                 "https://avatars3.githubusercontent.com/u/50344535?s=460&v=4"
+              ],
+              "visible": true,
+              "descricao": "Realizar o estudo do Modulo 1",
+              "comments": []
+            },
+            {
+              "id": 7,
+              "content": "Gravar sobre Geolocalização e mapas com React Native",
+              "labels": [
+                "#7159c1"
+              ],
+              "user": [
+                "https://avatars1.githubusercontent.com/u/50504236?s=460&v=4"
               ],
               "visible": true,
               "descricao": "Realizar o estudo do Modulo 1",
@@ -167,7 +180,41 @@
               "comments": []
             },
             {
-              "id": 12,
+              "id": 13,
+              "content": "Gravar Aula Internacionalização de aplicações Node.js, ReactJS e React Native",
+              "labels": [
+                "#7159c1"
+              ],
+              "visible": false,
+              "descricao": "Realizar o estudo do Modulo 1",
+              "user": [],
+              "comments": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "quadro": "Quadro do Pedro Fernandes",
+      "email": "contato.phfernandes@gmail.com",
+      "produce": [
+        {
+          "title": "Tarefas",
+          "creatable": true,
+          "cards": [
+            {
+              "id": 1,
+              "content": "Adicione um texto",
+              "labels": [],
+              "user": [
+                "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg"
+              ],
+              "visible": true,
+              "descricao": "Adicione uma Descrição",
+              "comments": []
+            },
+            {
+              "id": 1000,
               "content": "Gravar testes e deploy ReactJS",
               "labels": [
                 "#54e1f7"
@@ -175,8 +222,80 @@
               "user": [
                 "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg"
               ],
-              "visible": true,
+              "visible": false,
               "descricao": "Realizar o estudo do Modulo 1",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "title": "Desenvolvendo",
+          "creatable": true,
+          "cards": [
+            {
+              "id": 2,
+              "content": "Adicione um texto",
+              "labels": [],
+              "user": [
+                "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg"
+              ],
+              "visible": true,
+              "descricao": "Adicione uma Descrição",
+              "comments": []
+            },
+            {
+              "id": 14,
+              "content": "Criando map",
+              "labels": [],
+              "user": [
+                "https://avatars1.githubusercontent.com/u/50504236?s=460&v=4"
+              ],
+              "visible": false,
+              "descricao": "Realizar o estudo do Modulo 1",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "title": "Validação",
+          "creatable": true,
+          "cards": [
+            {
+              "id": 3,
+              "content": "Adicione um texto",
+              "labels": [],
+              "user": [
+                "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg"
+              ],
+              "visible": true,
+              "descricao": "Adicione uma Descrição",
+              "comments": []
+            },
+            {
+              "id": 9,
+              "content": "Ajustes na biblioteca unform",
+              "labels": [],
+              "visible": false,
+              "descricao": "Realizar o estudo do Modulo 1",
+              "user": [],
+              "comments": []
+            }
+          ]
+        },
+        {
+          "title": "Concluído",
+          "creatable": true,
+          "done": false,
+          "cards": [
+            {
+              "id": 4,
+              "content": "Adicione um texto",
+              "labels": [],
+              "user": [
+                "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg"
+              ],
+              "visible": true,
+              "descricao": "Adicione uma Descrição",
               "comments": []
             },
             {
@@ -192,7 +311,128 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 2
+    },
+    {
+      "quadro": "Quadro do Giovanni Vechi",
+      "email": "giovanni@gmail.com",
+      "produce": [
+        {
+          "title": "Tarefas",
+          "creatable": true,
+          "cards": [
+            {
+              "id": 1,
+              "content": "Adicione um texto",
+              "labels": [],
+              "user": [
+                "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg"
+              ],
+              "visible": true,
+              "descricao": "Adicione uma Descrição",
+              "comments": []
+            },
+            {
+              "id": 1000,
+              "content": "Gravar testes e deploy ReactJS",
+              "labels": [
+                "#54e1f7"
+              ],
+              "user": [
+                "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg"
+              ],
+              "visible": false,
+              "descricao": "Realizar o estudo do Modulo 1",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "title": "Desenvolvendo",
+          "creatable": true,
+          "cards": [
+            {
+              "id": 2,
+              "content": "Adicione um texto",
+              "labels": [],
+              "user": [
+                "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg"
+              ],
+              "visible": true,
+              "descricao": "Adicione uma Descrição",
+              "comments": []
+            },
+            {
+              "id": 14,
+              "content": "Criando map",
+              "labels": [],
+              "user": [
+                "https://avatars1.githubusercontent.com/u/50504236?s=460&v=4"
+              ],
+              "visible": false,
+              "descricao": "Realizar o estudo do Modulo 1",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "title": "Validação",
+          "creatable": true,
+          "cards": [
+            {
+              "id": 3,
+              "content": "Adicione um texto",
+              "labels": [],
+              "user": [
+                "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg"
+              ],
+              "visible": true,
+              "descricao": "Adicione uma Descrição",
+              "comments": []
+            },
+            {
+              "id": 9,
+              "content": "Ajustes na biblioteca unform",
+              "labels": [],
+              "visible": false,
+              "descricao": "Realizar o estudo do Modulo 1",
+              "user": [],
+              "comments": []
+            }
+          ]
+        },
+        {
+          "title": "Concluído",
+          "creatable": true,
+          "done": false,
+          "cards": [
+            {
+              "id": 4,
+              "content": "Adicione um texto",
+              "labels": [],
+              "user": [
+                "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg"
+              ],
+              "visible": true,
+              "descricao": "Adicione uma Descrição",
+              "comments": []
+            },
+            {
+              "id": 13,
+              "content": "Gravar Aula Internacionalização de aplicações Node.js, ReactJS e React Native",
+              "labels": [
+                "#7159c1"
+              ],
+              "visible": false,
+              "descricao": "Realizar o estudo do Modulo 1",
+              "user": [],
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "id": 3
     }
   ],
   "usuarioLogado": {
@@ -206,13 +446,17 @@
       "username": "Pedro Fernandes",
       "email": "contato.phfernandes@gmail.com",
       "password": "12345",
-      "id": 1
+      "id": 1,
+      "board": [
+        2
+      ]
     },
     {
       "username": "Giovanni Vechi",
       "email": "giovanni@gmail.com",
       "password": "123456",
-      "id": 2
+      "id": 2,
+      "board": [3]
     },
     {
       "username": "angelo",
@@ -225,6 +469,30 @@
       "email": "contsdfsdfsdf",
       "password": "",
       "id": 4
+    },
+    {
+      "username": "joao",
+      "email": "joao@gmail.com",
+      "password": "joao1",
+      "id": 5
+    },
+    {
+      "username": "ana maria",
+      "email": "anamaria@gmail..com",
+      "password": "ana12345",
+      "id": 6
+    },
+    {
+      "username": "ana maria",
+      "email": "anamaria@gmail.com",
+      "password": "ana12345",
+      "id": 7
+    },
+    {
+      "username": "julia",
+      "email": "julia@gmail.com",
+      "password": "julia123",
+      "id": 8
     }
   ],
   "comentarios": [

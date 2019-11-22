@@ -51,6 +51,7 @@ const initialComments = {
 
 export default function Card({ usuario, board, data, index, listIndex }) {
   const ref = useRef();
+  const ref2 = useRef();
   const { move } = useContext(BorderContext);
 
   const [{ isDragging }, dragRef] = useDrag({
@@ -90,10 +91,11 @@ export default function Card({ usuario, board, data, index, listIndex }) {
       }
       if (data.visible !== false) {
         move(draggedListIndex, targetListIndex, draggedIndex, targetIndex);
-
+        console.log("if")
         item.index = targetIndex;
         item.listIndex = targetListIndex;
       } else {
+        console.log("else")
         move(draggedListIndex, targetListIndex, draggedIndex, targetIndex);
         item.listIndex = targetListIndex;
       }
@@ -117,7 +119,7 @@ export default function Card({ usuario, board, data, index, listIndex }) {
   };
   const handleShow = () => {
     setShow(true);
-    const getComentarios = `http://localhost:3001/comentarios/${lists.id}`;
+    const getComentarios = `http://localhost:5000/comentarios/${lists.id}`;
     axios(getComentarios).then(resp => {
       setComentarios(resp.data);
     });
@@ -132,7 +134,7 @@ export default function Card({ usuario, board, data, index, listIndex }) {
   };
 
   const [lists, setList] = useState(data);
-  const baseUrl = "http://localhost:3001/board";
+  const baseUrl = "http://localhost:5000/board";
   const [initialState, setInitialState] = useState(data);
 
   const clear = () => {
@@ -179,7 +181,7 @@ export default function Card({ usuario, board, data, index, listIndex }) {
 
     const card = comentarios;
     const method = card.id ? "put" : "post";
-    const url = "http://localhost:3001/comentarios";
+    const url = "http://localhost:5000/comentarios";
     const getComentarios = card.id ? `${url}/${card.id}` : url;
     const envio = { id: card.id, comentario: sendComentarios };
 
@@ -256,7 +258,7 @@ export default function Card({ usuario, board, data, index, listIndex }) {
               show={showModal}
               target={target}
               placement="right"
-              container={ref.current}
+              container={ref2.current}
               containerPadding={20}
             >
               <Popover id="popover-contained">
@@ -283,7 +285,7 @@ export default function Card({ usuario, board, data, index, listIndex }) {
                         handleClickModal(e);
                       }}
                     >
-                     Pausado
+                      Pausado
                     </Tag>
                   </Row>
                   <Row>
@@ -294,7 +296,7 @@ export default function Card({ usuario, board, data, index, listIndex }) {
                         handleClickModal(e);
                       }}
                     >
-                     Concluído
+                      Concluído
                     </Tag>
                   </Row>
                   <Row>
@@ -305,7 +307,7 @@ export default function Card({ usuario, board, data, index, listIndex }) {
                         handleClickModal(e);
                       }}
                     >
-                     Correção
+                      Correção
                     </Tag>
                   </Row>
                   <Row>
@@ -329,7 +331,7 @@ export default function Card({ usuario, board, data, index, listIndex }) {
                   <LabelCard key={label} color={label} />
                 ))}
                 <Button
-                  ref={ref}
+                  ref={ref2}
                   variant="info"
                   style={{
                     textAlign: "center",
