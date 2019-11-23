@@ -44,7 +44,15 @@ const initialUser = {
 };
 
 export default function Board() {
-  const baseUrl = "http://localhost:5000/board";
+
+  const getBoard = `http://localhost:5000/board${window.location.pathname.replace(
+    "/board/",
+    "/"
+  )}`;
+
+
+
+  const baseUrl = getBoard;
   const getUsuario = "http://localhost:5000/usuarioLogado";
   const [lists, setList] = useState(initialState.board[0].produce);
   const [board, setBoard] = useState(initialState.board);  
@@ -52,8 +60,9 @@ export default function Board() {
 
   useEffect(() => {
     axios(baseUrl).then(resp => {
-      setList(resp.data[0].produce);
-      setBoard(resp.data[0]);
+   
+      setList(resp.data.produce);
+      setBoard(resp.data);
     });
     axios(getUsuario).then(resp => {
       setUsuario(resp.data);

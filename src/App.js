@@ -11,7 +11,7 @@ function App() {
   return (
     <DndProvider backend={HTML5Backend}>
       <BrowserRouter>
-        <Header />
+        <Header dados={window.location.search}/>
         <Routes />
         <GlobalStyle />
       </BrowserRouter>

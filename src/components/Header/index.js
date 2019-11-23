@@ -15,11 +15,18 @@ import { useStyles } from "./styles";
 
 const data = loadLists();
 
-export default function Header() {
+export default function Header(dados) {
   const [name] = useState(data);
   const [anchorElement, setAnchorElement] = useState(null);
   const handleOpenMenu = e => setAnchorElement(e.target);
   const handleCloseMenu = () => setAnchorElement(null);
+
+  const idBoard = `${window.location.pathname.replace(
+    "/board/",
+    "/"
+  )}`;
+  console.log(dados.dados.replace("?id=",
+  ""))
 
   const classes = useStyles();
   return (
@@ -30,11 +37,12 @@ export default function Header() {
       >
         <Toolbar>
           <LogoContainer>
-            <Link to="/principal">
+            <Link to={"/principal?id="+dados.dados.replace("?id=",
+  "")}>
               <img src={logo} alt="Kardex" />
             </Link>
           </LogoContainer>
-          <Typography> Olá {name[0].name}</Typography>
+        
           <IconButton color={"inherit"} onClick={handleOpenMenu}>
             <AccountCircle />
           </IconButton>
@@ -43,8 +51,6 @@ export default function Header() {
             onClose={handleCloseMenu}
             anchorEl={anchorElement}
           >
-            <MenuItem>Convidar Membros</MenuItem>
-            <MenuItem>Configuração</MenuItem>
             <MenuItem>Sair</MenuItem>
           </Menu>
         </Toolbar>

@@ -8,12 +8,12 @@ export default function Quadro(data) {
     "?id=",
     ""
   )}`;
-
+ 
   const [lists, setList] = useState([]);
   const [board, setBoard] = useState([])
   const [usuario, setUsuario] = useState([])
 
-  const saveBoard = async NewBoard => {
+  const saveBoard = async (NewBoard, Usuario) => {
     // const baseUrlBoard = `http://localhost:5000/board`;
 
     // axios(baseUrlBoard).then(resp => {
@@ -27,17 +27,26 @@ export default function Quadro(data) {
     const url = "http://localhost:5000/Board";
 
     axios[method](url, card).then(resp2 => {
-      setList(resp2.data);
-      const method = "post";
-      const url = "http://localhost:5000/Board";
+   
+      const newUsuario = Usuario;
+   
+      newUsuario.board.push(resp2.data.id)
+   
+      setList([resp2.data]);
+
+      const method = "put";
+      const url2 = `http://localhost:5000/usuario/${newUsuario.id}`;
       console.log(resp2.data.id)
-      console.log(usuario)
+      axios[method](url2, newUsuario).then(resp3  => {
+         console.log(resp3.data) 
+      
+        });
     });
   };
 
   useEffect(() => {
     axios(getBoard).then(resp => {
-      if (resp.data.board == "") {
+      if (resp.data.board == "" || resp.data.board == undefined) {
         const initialQuadro = 
           {
             quadro: "Quadro do " + resp.data.username,
@@ -156,10 +165,11 @@ export default function Quadro(data) {
               }
             ]
           }
-       
-
+        
+        
+        setUsuario(resp.data)
         setList([initialQuadro]);
-        saveBoard(initialQuadro);
+        saveBoard(initialQuadro, resp.data );
       } else {
         setUsuario(resp.data)
         const baseUrl = `http://localhost:5000/board/${resp.data.board}`;
@@ -171,15 +181,15 @@ export default function Quadro(data) {
   }, []);
 
   lists.map(quadro => quadro.quadro);
-
+ 
   return (
     <>
       <Container>
         {lists.map(lists => (
           <div className="card">
-            <Link to="/">
+            <Link to={"/board/" + lists.id} >
               <div className="card face">
-                <Label>{lists.quadro} </Label>
+                <Label>{lists.quadro} {lists.id} </Label>
               </div>
             </Link>
           </div>
