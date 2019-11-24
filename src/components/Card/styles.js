@@ -136,13 +136,14 @@ export const LabelComentario = styled.div`
   color: black;
 `;
 
-export const Titulo = styled.textarea`
+export const Titulo = styled.input`
   background: transparent;
   border-radius: 3px;
   box-shadow: none;
   font-size: 20px;
   font-weight: 600;
   border-style: none;
+  width: 38ch;
 
   :focus {
     ${contorno}
@@ -156,7 +157,7 @@ export const Titulo = styled.textarea`
   overflow: hidden;
   overflow-wrap: break-word;
   height: 33px;
-  width: 80%;
+  
 `;
 
 export const Subtitle = styled.label`

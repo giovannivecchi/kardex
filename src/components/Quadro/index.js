@@ -8,9 +8,9 @@ export default function Quadro(data) {
     "?id=",
     ""
   )}`;
+
  
   const [lists, setList] = useState([]);
-  const [board, setBoard] = useState([])
   const [usuario, setUsuario] = useState([])
 
   const saveBoard = async (NewBoard, Usuario) => {
@@ -30,7 +30,7 @@ export default function Quadro(data) {
    
       const newUsuario = Usuario;
    
-      newUsuario.board.push(resp2.data.id)
+      newUsuario.board = resp2.data.id
    
       setList([resp2.data]);
 
@@ -46,7 +46,8 @@ export default function Quadro(data) {
 
   useEffect(() => {
     axios(getBoard).then(resp => {
-      if (resp.data.board == "" || resp.data.board == undefined) {
+      console.log(resp.data)
+      if (resp.data.board === "" || resp.data.board === undefined) {
         const initialQuadro = 
           {
             quadro: "Quadro do " + resp.data.username,

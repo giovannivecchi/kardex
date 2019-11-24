@@ -22,8 +22,9 @@ const initialState = {
               id: 1,
               content: "Estudar módulo 01 de NodeJS",
               labels: ["#7159c1"],
-              user:
-                ["https://avatars3.githubusercontent.com/u/50344535?s=460&v=4"],
+              user: [
+                "https://avatars3.githubusercontent.com/u/50344535?s=460&v=4"
+              ],
               visible: false,
               descricao: "Realizar o estudo do Modulo 1"
             }
@@ -44,29 +45,33 @@ const initialUser = {
 };
 
 export default function Board() {
-
   const getBoard = `http://localhost:5000/board${window.location.pathname.replace(
     "/board/",
     "/"
   )}`;
 
-
-
   const baseUrl = getBoard;
   const getUsuario = "http://localhost:5000/usuarioLogado";
   const [lists, setList] = useState(initialState.board[0].produce);
-  const [board, setBoard] = useState(initialState.board);  
+  const [board, setBoard] = useState(initialState.board);
   const [usuario, setUsuario] = useState(initialUser.usuario);
 
-  useEffect(() => {
+  const buscaDados = async () => {
     axios(baseUrl).then(resp => {
-   
-      setList(resp.data.produce);
-      setBoard(resp.data);
+      if (resp.data.id > 0) {
+        setList(resp.data.produce);
+        setBoard(resp.data);
+      }
     });
     axios(getUsuario).then(resp => {
-      setUsuario(resp.data);
+      if (resp.data.id > 0) {
+        setUsuario(resp.data);
+      }
     });
+  };
+
+  useEffect(() => {
+    buscaDados();
   }, []);
 
   function move(fromList, toList, from, to) {
@@ -81,14 +86,15 @@ export default function Board() {
 
   const saveBoard = () => {
     const method = "put";
+    console.log("aqui");
     const newBoard = { ...board };
-    newBoard.produce = lists;
 
-    const url = newBoard.id ? `${baseUrl}/${board.id}` : undefined;
-    if (url !== undefined) {
-      axios[method](url, newBoard).catch(err => {
-        console.log(err);
-      });
+    newBoard.produce = lists;
+    const url = baseUrl;
+    if (board.id > 0) {
+      if (url !== undefined) {
+        axios[method](url, newBoard).catch(err => {});
+      }
     }
   };
 
@@ -97,7 +103,13 @@ export default function Board() {
     <BoardContext.Provider value={{ lists, move }}>
       <Container>
         {lists.map((list, index) => (
-          <List key={list.title} index={index} data={list} board={board} usuario={usuario} />
+          <List
+            key={list.title}
+            index={index}
+            data={list}
+            board={board}
+            usuario={usuario}
+          />
         ))}
       </Container>
     </BoardContext.Provider>

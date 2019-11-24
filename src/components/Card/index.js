@@ -36,18 +36,6 @@ import TextField from "@material-ui/core/TextField";
 
 import { useStyles } from "./styles";
 
-const initialComments = {
-  id: null,
-  comentario: [
-    {
-      id: null,
-      username: "",
-      imagem: "",
-      data: "",
-      comment: ""
-    }
-  ]
-};
 
 export default function Card({ usuario, board, data, index, listIndex }) {
   const ref = useRef();
@@ -104,6 +92,12 @@ export default function Card({ usuario, board, data, index, listIndex }) {
 
   dragRef(dropRef(ref));
 
+  const initialComments = {
+    id: index,
+    board: board.id,
+    comentario: [ ]
+  };
+
   const classes = useStyles();
   const [comentarios, setComentarios] = useState(initialComments);
   const [NewComentarios, setNewComentarios] = useState(
@@ -119,9 +113,10 @@ export default function Card({ usuario, board, data, index, listIndex }) {
   };
   const handleShow = () => {
     setShow(true);
-    const getComentarios = `http://localhost:5000/comentarios/${lists.id}`;
+    const getComentarios = `http://localhost:5000/comentarios/${board.produce[listIndex].cards[index].id}`;
     axios(getComentarios).then(resp => {
       setComentarios(resp.data);
+      console.log(resp.data)
     });
   };
 
@@ -176,14 +171,27 @@ export default function Card({ usuario, board, data, index, listIndex }) {
   };
 
   const saveComentarios = () => {
-    const sendComentarios = [...comentarios.comentario];
+    const sendComentarios = [...comentarios.comentario]
     sendComentarios.unshift(NewComentarios);
 
-    const card = comentarios;
-    const method = card.id ? "put" : "post";
+    // var maior = 0;
+    // for (var i = 0; i < comentarios.comentario.length; i++) {
+    //   if (comentarios.comentario[i].id > maior) {
+    //     maior = comentarios.comentario[i].id;
+    //   }
+    // }
+
+    let id = board.produce[listIndex].cards[index].id
+    console.log(comentarios.comentario.length)
+    const method = comentarios.id ? "put" : "post";
     const url = "http://localhost:5000/comentarios";
-    const getComentarios = card.id ? `${url}/${card.id}` : url;
-    const envio = { id: card.id, comentario: sendComentarios };
+    const getComentarios = comentarios.id ? `${url}/${id}` : url;
+    const envio = { id: id,
+                    board: board.id,
+                    comentario: sendComentarios };
+    
+    setComentarios(envio);
+    console.log(envio)
 
     axios[method](getComentarios, envio).then(resp => {
       const comentario = resp.data;
@@ -197,14 +205,14 @@ export default function Card({ usuario, board, data, index, listIndex }) {
     var data = new Date();
 
     var maior = 0;
-    for (var i = 0; i < comentarios.comentario.length; i++) {
+    for (var i = 0; i < comentarios.length; i++) {
       if (comentarios.comentario[i].id > maior) {
         maior = comentarios.comentario[i].id;
       }
     }
 
     comentario.id = maior + 1;
-
+    comentario.board = board.id;
     comentario.username = usuario.username;
     comentario.imagem = usuario.imagem;
     comentario.data = data.getDate();
@@ -240,12 +248,14 @@ export default function Card({ usuario, board, data, index, listIndex }) {
       >
         <form>
           <Modal.Header closeButton>
-            <Col xs={10} md={11} mt={11}>
+            <Col xs={11} md={11} mt={11}>
               <Modal.Title>
                 <Titulo
                   title={"Nome do Card"}
                   value={lists.content}
                   name="content"
+                  type="text"
+                  maxlength="38"
                   onChange={e => {
                     updateField(e);
                   }}
@@ -366,37 +376,56 @@ export default function Card({ usuario, board, data, index, listIndex }) {
                   ></Descricao>
                 </Row>
                 <Row style={{ marginBottom: "3vh" }}>
-                  <Col xs={3} md={3} mt={3} style={{ textAlign: "left" }}>
+                  <Col xs={3} md={3} mt={3} >
                     <TextField
                       id="date"
                       label="Previsão de Entrega"
                       type="date"
+                      name="previsaoEntrega"
+                      value={lists.previsaoEntrega}
+                      style={{ float: "left" }}
                       defaultValue={`${now.getFullYear()}-${now.getMonth() +
                         1}-${now.getDate()}`}
                       InputLabelProps={{
                         shrink: true
+                        
+                      }}
+                      onChange={e => {
+                        updateField(e);
                       }}
                     />
                   </Col>
-                  <Col xs={3} md={3} mt={3} style={{ float: "left" }}>
+                  <Col xs={3} md={3} mt={3} >
                     <TextField
                       id="date"
                       label="Data de Entrega"
+                      name="dataEntrega"
+                      value={lists.dataEntrega}
                       type="date"
+                      style={{ float: "left" }}
                       defaultValue={`${now.getFullYear()}-${now.getMonth() +
                         1}-${now.getDate()}`}
                       InputLabelProps={{
                         shrink: true
                       }}
+                      onChange={e => {
+                        updateField(e);
+                      }}
                     />
                   </Col>
-                  <Col xs={3} md={3} mt={3} style={{ float: "left" }}>
+                  <Col xs={3} md={3} mt={3} >
                     <TextField
                       id="adicionais"
                       label="Dados Adicionais"
                       type="text"
+                      name="adicionais"
+                      value={lists.adicionais}
+                      style={{ float: "left" }}
                       InputLabelProps={{
                         shrink: true
+                      }}
+                      onChange={e => {
+                        updateField(e);
                       }}
                     />
                   </Col>
@@ -423,9 +452,12 @@ export default function Card({ usuario, board, data, index, listIndex }) {
                   </Col>
                 </Row>
                 <Row>
+                <Col xs={8} md={8} mt={8} ></Col>
+            
+                  <Col xs={2} md={2} mt={2}>
                   <Button
                     size="sm"
-                    style={{ marginLeft: "71.4%", marginTop: "0%" }}
+                    style={{ float: "right" }}
                     variant="outline-primary"
                     onClick={e => {
                       saveComentarios(e);
@@ -434,6 +466,7 @@ export default function Card({ usuario, board, data, index, listIndex }) {
                     <IconNearMe fontSize="small" />
                     Enviar
                   </Button>
+                  </Col>
                 </Row>
                 <Row>
                   <Line></Line>

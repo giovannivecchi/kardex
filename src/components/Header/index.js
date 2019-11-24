@@ -25,8 +25,6 @@ export default function Header(dados) {
     "/board/",
     "/"
   )}`;
-  console.log(dados.dados.replace("?id=",
-  ""))
 
   const classes = useStyles();
   return (
@@ -37,8 +35,7 @@ export default function Header(dados) {
       >
         <Toolbar>
           <LogoContainer>
-            <Link to={"/principal?id="+dados.dados.replace("?id=",
-  "")}>
+            <Link to={"/principal?id=1"}>
               <img src={logo} alt="Kardex" />
             </Link>
           </LogoContainer>

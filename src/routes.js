@@ -8,5 +8,5 @@ export default props =>
     <Switch>
         <Route exact path='/board/:id' component={Board}/>
         <Route exact path='/:id' component={Quadro}/>
-        <Redirect from='*' to='/'/>
+        <Redirect from='*' to='/board/1'/>
     </Switch>
