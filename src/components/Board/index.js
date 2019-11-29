@@ -86,7 +86,7 @@ export default function Board() {
 
   const saveBoard = () => {
     const method = "put";
-    console.log("aqui");
+    
     const newBoard = { ...board };
 
     newBoard.produce = lists;

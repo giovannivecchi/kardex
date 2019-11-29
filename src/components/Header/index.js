@@ -3,28 +3,19 @@ import { Link } from "react-router-dom";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
-import { Typography } from "@material-ui/core";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
 import logo from "../../assets/img/logo.png";
 
-import { loadLists } from "../../services/api";
 import { LogoContainer } from "./styles";
 import { useStyles } from "./styles";
 
-const data = loadLists();
 
 export default function Header(dados) {
-  const [name] = useState(data);
   const [anchorElement, setAnchorElement] = useState(null);
   const handleOpenMenu = e => setAnchorElement(e.target);
   const handleCloseMenu = () => setAnchorElement(null);
-
-  const idBoard = `${window.location.pathname.replace(
-    "/board/",
-    "/"
-  )}`;
 
   const classes = useStyles();
   return (

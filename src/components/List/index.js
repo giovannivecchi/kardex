@@ -1,14 +1,30 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Container } from "./styles";
 import { MdAdd } from "react-icons/md";
 import axios from "axios";
 import Card from "../Card";
 
 export default function List({ usuario, board, data, index: listIndex }) {
+  const [card, setCard] = useState(data);
+  const [newBoard, setBoard] = useState(board);
+  var ativo = false
+  const insertCard = async e => {
 
-  const [card, setCard] = useState(data);  
+    
+    const url = `http://localhost:5000/board/${board.id}`;
+    console.log(url);
+   const result = await axios(url).then(resp => {
+      console.log(resp)
+      if (resp.data.id > 0) {
+        setCard(resp.data.produce);
+        setBoard(resp.data);
+      }
+      return resp;
+      
+    });
 
-  const insertCard = e => {
+    
+ 
     var maior = 0;
     for (var i = 0; i < data.cards.length; i++) {
       if (data.cards[i].id > maior) {
@@ -28,24 +44,39 @@ export default function List({ usuario, board, data, index: listIndex }) {
       comments: []
     };
 
-    setCard(data.cards.unshift(defaultCard))
-    saveNewCard()
+    console.log("card");
+    console.log(card);
+    if (result.data !== undefined) {
+      setCard(result.data.produce[listIndex].cards.unshift(defaultCard));
+      console.log("unshift");
+      console.log(result.data.produce[listIndex].cards);
+    }
+
+    saveNewCard(result.data.produce[listIndex].cards);
   };
 
-  
-  const saveNewCard = () => {
-    const list = board;
-   
-    console.log("list"+ list)
+  const saveNewCard = card => {
+    var list;
 
-  
+    if (ativo === false) {
+      setBoard(board);
+      list = board;
+    } else {
+      list = newBoard;
+    }
+    console.log("list");
+    console.log(list.produce[listIndex].cards = card);
+    setBoard(list);
+
     const method = "put";
     const url = `http://localhost:5000/board/${list.id}`;
 
     axios[method](url, list).then(resp => {
-       const comentario = resp.data;
-       console.log(comentario);
-     });
+      ativo = true
+      setBoard(resp.data);
+      console.log(resp.data);
+      setCard(resp.data.produce[listIndex].cards);
+    });
   };
 
   return (

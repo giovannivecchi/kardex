@@ -11,17 +11,10 @@ export default function Quadro(data) {
 
  
   const [lists, setList] = useState([]);
-  const [usuario, setUsuario] = useState([])
+ // const [usuario, setUsuario] = useState([])
 
   const saveBoard = async (NewBoard, Usuario) => {
-    // const baseUrlBoard = `http://localhost:5000/board`;
-
-    // axios(baseUrlBoard).then(resp => {
-
-    //   const sendBoard = [resp.data]
-    //   sendBoard.unshift(NewBoard);
-    //   console.log(sendBoard);
-
+   
     const card = NewBoard;
     const method = "post";
     const url = "http://localhost:5000/Board";
@@ -168,11 +161,11 @@ export default function Quadro(data) {
           }
         
         
-        setUsuario(resp.data)
+     //   setUsuario(resp.data)
         setList([initialQuadro]);
         saveBoard(initialQuadro, resp.data );
       } else {
-        setUsuario(resp.data)
+     //   setUsuario(resp.data)
         const baseUrl = `http://localhost:5000/board/${resp.data.board}`;
         axios(baseUrl).then(resp => {
           setList([resp.data]);
