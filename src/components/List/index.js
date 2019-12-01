@@ -7,31 +7,35 @@ import Card from "../Card";
 export default function List({ usuario, board, data, index: listIndex }) {
   const [card, setCard] = useState(data);
   const [newBoard, setBoard] = useState(board);
-  var ativo = false
-  const insertCard = async e => {
+  var ativo = false;
 
-    
+  const insertCard = async e => {
     const url = `http://localhost:5000/board/${board.id}`;
-    console.log(url);
-   const result = await axios(url).then(resp => {
-      console.log(resp)
+    const result = await axios(url).then(resp => {
       if (resp.data.id > 0) {
-        setCard(resp.data.produce);
         setBoard(resp.data);
       }
       return resp;
-      
     });
 
-    
- 
     var maior = 0;
-    for (var i = 0; i < data.cards.length; i++) {
-      if (data.cards[i].id > maior) {
-        maior = data.cards[i].id;
+    for (var i = 0; i < result.data.produce.length; i++) {
+   
+      for (var j = 0 ; j< result.data.produce[i].cards.length; j++){
+    
+        if (result.data.produce[i].cards[j].id > maior) {
+          maior = result.data.produce[i].cards[j].id;
+        }
       }
+    
     }
-
+   
+    // var maior = 0;
+    // for (var i = 0; i < data.cards.length; i++) {
+    //   if (data.cards[i].id > maior) {
+    //     maior = data.cards[i].id;
+    //   }
+    // }
     const defaultCard = {
       id: maior + 1,
       content: "Adicione um texto",
@@ -44,18 +48,15 @@ export default function List({ usuario, board, data, index: listIndex }) {
       comments: []
     };
 
-    console.log("card");
-    console.log(card);
     if (result.data !== undefined) {
-      setCard(result.data.produce[listIndex].cards.unshift(defaultCard));
-      console.log("unshift");
-      console.log(result.data.produce[listIndex].cards);
+      result.data.produce[listIndex].cards.unshift(defaultCard)
+      console.log(result.data)
     }
 
     saveNewCard(result.data.produce[listIndex].cards);
   };
 
-  const saveNewCard = card => {
+  const saveNewCard = cards => {
     var list;
 
     if (ativo === false) {
@@ -64,20 +65,23 @@ export default function List({ usuario, board, data, index: listIndex }) {
     } else {
       list = newBoard;
     }
-    console.log("list");
-    console.log(list.produce[listIndex].cards = card);
+    list.produce[listIndex].cards = cards;
     setBoard(list);
-
+    const newCard = card;
+    newCard.cards = cards;
+    setCard(newCard)
+    console.log(newCard)
     const method = "put";
     const url = `http://localhost:5000/board/${list.id}`;
 
     axios[method](url, list).then(resp => {
-      ativo = true
+      ativo = true;
       setBoard(resp.data);
       console.log(resp.data);
-      setCard(resp.data.produce[listIndex].cards);
     });
   };
+
+
 
   return (
     <>
@@ -95,13 +99,13 @@ export default function List({ usuario, board, data, index: listIndex }) {
           )}
         </header>
         <ul>
-          {data.cards.map((card, index) => (
+          {data.cards !== undefined && data.cards.map((cards, index) => (
             <>
               <Card
-                key={card.id}
+                key={cards.id}
                 listIndex={listIndex}
                 index={index}
-                data={card}
+                data={cards}
                 board={board}
                 usuario={usuario}
               />

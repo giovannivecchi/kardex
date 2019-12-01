@@ -79,11 +79,10 @@ export default function Card({ usuario, board, data, index, listIndex }) {
       }
       if (data.visible !== false) {
         move(draggedListIndex, targetListIndex, draggedIndex, targetIndex);
-        console.log("if")
         item.index = targetIndex;
         item.listIndex = targetListIndex;
+        console.log(item)
       } else {
-        console.log("else")
         move(draggedListIndex, targetListIndex, draggedIndex, targetIndex);
         item.listIndex = targetListIndex;
       }
@@ -439,7 +438,7 @@ export default function Card({ usuario, board, data, index, listIndex }) {
                 </Row>
                 <Row>
                   <Col xs={1} md={1} mt={1}>
-                    <Img src={usuario.imagem} alt="" />
+                    <Img src={"https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg"} alt="" />
                   </Col>
                   <Col xs={11} md={11} mt={11} style={{ textAlign: "left" }}>
                     <Comentario
@@ -477,7 +476,7 @@ export default function Card({ usuario, board, data, index, listIndex }) {
                       <TextoComentario>
                         <Row>
                           <Col xs={1} md={1} mt={1}>
-                            <ImgComment src={comment.imagem} alt="" />
+                            <ImgComment src={"https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg"} alt="" />
                           </Col>
                           <Col xs={11} md={11} mt={11}>
                             <LabelUsuario>{comment.username}</LabelUsuario>

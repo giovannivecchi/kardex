@@ -53,6 +53,7 @@ export default function Board() {
   const baseUrl = getBoard;
   const getUsuario = "http://localhost:5000/usuarioLogado";
   const [lists, setList] = useState(initialState.board[0].produce);
+
   const [board, setBoard] = useState(initialState.board);
   const [usuario, setUsuario] = useState(initialUser.usuario);
 
@@ -75,6 +76,7 @@ export default function Board() {
   }, []);
 
   function move(fromList, toList, from, to) {
+
     setList(
       produce(lists, draft => {
         const dragged = draft[fromList].cards[from];
@@ -82,27 +84,36 @@ export default function Board() {
         draft[toList].cards.splice(to, 0, dragged);
       })
     );
-  }
+    console.log(lists)
 
+  }
+  var  newBoard = {}
   const saveBoard = () => {
     const method = "put";
     
-    const newBoard = { ...board };
+    newBoard = { ...board };
 
     newBoard.produce = lists;
+    const newList = lists;
+    
+  
     const url = baseUrl;
     if (board.id > 0) {
       if (url !== undefined) {
         axios[method](url, newBoard).catch(err => {});
+   //     setBoard(newBoard)
+        console.log(newBoard)
       }
     }
   };
-
   saveBoard();
+
+
   return (
     <BoardContext.Provider value={{ lists, move }}>
       <Container>
         {lists.map((list, index) => (
+       
           <List
             key={list.title}
             index={index}

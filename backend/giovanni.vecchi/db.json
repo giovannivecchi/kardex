@@ -10,33 +10,6 @@
           "creatable": true,
           "cards": [
             {
-              "id": 1007,
-              "content": "Caius é um viadao",
-              "labels": [
-                "#B11"
-              ],
-              "user": [
-                "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg"
-              ],
-              "visible": true,
-              "descricao": "viado nesni",
-              "comments": [],
-              "adicionais": "viadao"
-            },
-            {
-              "id": 1006,
-              "content": "Novo card 6",
-              "labels": [
-                "#F1F111"
-              ],
-              "user": [
-                "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg"
-              ],
-              "visible": true,
-              "descricao": "teste4",
-              "comments": []
-            },
-            {
               "id": 1005,
               "content": "Novo card 5",
               "labels": [
@@ -174,8 +147,19 @@
           "creatable": true,
           "cards": [
             {
-              "id": 1008,
-              "content": "Adicione um texto12313",
+              "id": 1003,
+              "content": "Adicione um texto2",
+              "labels": [],
+              "user": [
+                "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg"
+              ],
+              "visible": true,
+              "descricao": "Adicione uma descrição",
+              "comments": []
+            },
+            {
+              "id": 1002,
+              "content": "Adicione um texto9",
               "labels": [],
               "user": [
                 "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg"
@@ -258,35 +242,14 @@
           "creatable": true,
           "cards": [
             {
-              "id": 12,
-              "content": "Gravar testes e deploy ReactJS",
-              "labels": [
-                "#54e1f7"
-              ],
+              "id": 1009,
+              "content": "Tem uma tarefa de limpeza",
+              "labels": [],
               "user": [
                 "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg"
               ],
               "visible": true,
-              "descricao": "Realizar o estudo do Modulo 1",
-              "previsaoEntrega": "",
-              "dataEntrega": "",
-              "adicionais": "",
-              "comments": []
-            },
-            {
-              "id": 8,
-              "content": "Gravar testes e deploy ReactJS",
-              "labels": [
-                "#54e1f7"
-              ],
-              "user": [
-                "https://avatars3.githubusercontent.com/u/50344535?s=460&v=4"
-              ],
-              "visible": true,
-              "descricao": "Realizar o estudo do Modulo 1",
-              "previsaoEntrega": "",
-              "dataEntrega": "",
-              "adicionais": "",
+              "descricao": "Adicione uma descrição",
               "comments": []
             },
             {
@@ -324,6 +287,124 @@
           "creatable": true,
           "done": false,
           "cards": [
+            {
+              "id": 1008,
+              "content": "Adicione um texto12313",
+              "labels": [],
+              "user": [
+                "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg"
+              ],
+              "visible": true,
+              "descricao": "Adicione uma descrição",
+              "comments": []
+            },
+            {
+              "id": 1007,
+              "content": "Caius é um viadao",
+              "labels": [
+                "#B11"
+              ],
+              "user": [
+                "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg"
+              ],
+              "visible": true,
+              "descricao": "viado nesni",
+              "comments": [],
+              "adicionais": "viadao"
+            },
+            {
+              "id": 1006,
+              "content": "Novo card 6",
+              "labels": [
+                "#F1F111"
+              ],
+              "user": [
+                "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg"
+              ],
+              "visible": true,
+              "descricao": "teste4",
+              "comments": []
+            },
+            {
+              "id": 1010,
+              "content": "Adicione um texto8",
+              "labels": [],
+              "user": [
+                "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg"
+              ],
+              "visible": true,
+              "descricao": "Adicione uma descrição",
+              "comments": []
+            },
+            {
+              "id": 1009,
+              "content": "teste6",
+              "labels": [],
+              "user": [
+                "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg"
+              ],
+              "visible": true,
+              "descricao": "Adicione uma descrição",
+              "comments": []
+            },
+            {
+              "id": 8,
+              "content": "Gravar testes e deploy ReactJS",
+              "labels": [
+                "#54e1f7"
+              ],
+              "user": [
+                "https://avatars3.githubusercontent.com/u/50344535?s=460&v=4"
+              ],
+              "visible": true,
+              "descricao": "Realizar o estudo do Modulo 1",
+              "previsaoEntrega": "",
+              "dataEntrega": "",
+              "adicionais": "",
+              "comments": []
+            },
+            {
+              "id": 12,
+              "content": "Gravar testes e deploy ReactJS",
+              "labels": [
+                "#54e1f7"
+              ],
+              "user": [
+                "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg"
+              ],
+              "visible": true,
+              "descricao": "Realizar o estudo do Modulo 1",
+              "previsaoEntrega": "",
+              "dataEntrega": "",
+              "adicionais": "",
+              "comments": []
+            },
+            {
+              "id": 1008,
+              "content": "teste de novo card 5",
+              "labels": [
+                "#B11",
+                "#39fc03",
+                "#F1F111"
+              ],
+              "user": [
+                "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg"
+              ],
+              "visible": true,
+              "descricao": "nova descricao",
+              "comments": []
+            },
+            {
+              "id": 1010,
+              "content": "Arroz e feijao",
+              "labels": [],
+              "user": [
+                "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg"
+              ],
+              "visible": true,
+              "descricao": "Adicione uma descrição",
+              "comments": []
+            },
             {
               "id": 1008,
               "content": "Adicione um texto",
@@ -366,7 +447,8 @@
       ]
     },
     {
-      "quadro": "Quadro do undefined",
+      "quadro": "Quadro do angelo",
+      "email": "angelo@gmail.com",
       "produce": [
         {
           "title": "Tarefas",
@@ -483,13 +565,286 @@
         }
       ],
       "id": 2
+    },
+    {
+      "quadro": "Quadro do Pedro Fernandes",
+      "email": "contato.phfernandes@gmail.com",
+      "produce": [
+        {
+          "title": "Tarefas",
+          "creatable": true,
+          "cards": [
+            {
+              "id": 1,
+              "content": "Adicione um texto",
+              "labels": [],
+              "user": [
+                "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg"
+              ],
+              "visible": true,
+              "descricao": "Adicione uma Descrição",
+              "comments": []
+            },
+            {
+              "id": 1000,
+              "content": "Gravar testes e deploy ReactJS",
+              "labels": [
+                "#54e1f7"
+              ],
+              "user": [
+                "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg"
+              ],
+              "visible": false,
+              "descricao": "Realizar o estudo do Modulo 1",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "title": "Desenvolvendo",
+          "creatable": true,
+          "cards": [
+            {
+              "id": 2,
+              "content": "Adicione um texto",
+              "labels": [],
+              "user": [
+                "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg"
+              ],
+              "visible": true,
+              "descricao": "Adicione uma Descrição",
+              "comments": []
+            },
+            {
+              "id": 14,
+              "content": "Criando map",
+              "labels": [],
+              "user": [
+                "https://avatars1.githubusercontent.com/u/50504236?s=460&v=4"
+              ],
+              "visible": false,
+              "descricao": "Realizar o estudo do Modulo 1",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "title": "Validação",
+          "creatable": true,
+          "cards": [
+            {
+              "id": 3,
+              "content": "Adicione um texto",
+              "labels": [],
+              "user": [
+                "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg"
+              ],
+              "visible": true,
+              "descricao": "Adicione uma Descrição",
+              "comments": []
+            },
+            {
+              "id": 9,
+              "content": "Ajustes na biblioteca unform",
+              "labels": [],
+              "visible": false,
+              "descricao": "Realizar o estudo do Modulo 1",
+              "user": [],
+              "comments": []
+            }
+          ]
+        },
+        {
+          "title": "Concluído",
+          "creatable": true,
+          "done": false,
+          "cards": [
+            {
+              "id": 4,
+              "content": "Adicione um texto",
+              "labels": [],
+              "user": [
+                "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg"
+              ],
+              "visible": true,
+              "descricao": "Adicione uma Descrição",
+              "comments": []
+            },
+            {
+              "id": 13,
+              "content": "Gravar Aula Internacionalização de aplicações Node.js, ReactJS e React Native",
+              "labels": [
+                "#7159c1"
+              ],
+              "visible": false,
+              "descricao": "Realizar o estudo do Modulo 1",
+              "user": [],
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "id": 3
+    },
+    {
+      "quadro": "Quadro do joao",
+      "email": "joao@gmail.com",
+      "produce": [
+        {
+          "title": "Tarefas",
+          "creatable": true,
+          "cards": [
+            {
+              "id": 1002,
+              "content": "Novo card 3",
+              "labels": [
+                "#F1F111"
+              ],
+              "user": [
+                "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg"
+              ],
+              "visible": true,
+              "descricao": "Novo card 3",
+              "comments": [],
+              "previsaoEntrega": "2019-12-01",
+              "dataEntrega": "2019-12-02",
+              "adicionais": "123"
+            },
+            {
+              "id": 1,
+              "content": "Adicione um texto",
+              "labels": [],
+              "user": [
+                "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg"
+              ],
+              "visible": true,
+              "descricao": "Adicione uma Descrição",
+              "comments": []
+            },
+            {
+              "id": 1000,
+              "content": "Gravar testes e deploy ReactJS",
+              "labels": [
+                "#54e1f7"
+              ],
+              "user": [
+                "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg"
+              ],
+              "visible": false,
+              "descricao": "Realizar o estudo do Modulo 1",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "title": "Desenvolvendo",
+          "creatable": true,
+          "cards": [
+            {
+              "id": 2,
+              "content": "Adicione um texto",
+              "labels": [],
+              "user": [
+                "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg"
+              ],
+              "visible": true,
+              "descricao": "Adicione uma Descrição",
+              "comments": []
+            },
+            {
+              "id": 14,
+              "content": "Criando map",
+              "labels": [],
+              "user": [
+                "https://avatars1.githubusercontent.com/u/50504236?s=460&v=4"
+              ],
+              "visible": false,
+              "descricao": "Realizar o estudo do Modulo 1",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "title": "Validação",
+          "creatable": true,
+          "cards": [
+            {
+              "id": 1001,
+              "content": "Primeiro card do usuario Joao",
+              "labels": [],
+              "user": [
+                "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg"
+              ],
+              "visible": true,
+              "descricao": "adicionando uma descricao para o quadro joao",
+              "comments": [],
+              "previsaoEntrega": "2019-12-01",
+              "dataEntrega": "2019-12-08",
+              "adicionais": "12355"
+            },
+            {
+              "id": 3,
+              "content": "Adicione um texto",
+              "labels": [],
+              "user": [
+                "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg"
+              ],
+              "visible": true,
+              "descricao": "Adicione uma Descrição",
+              "comments": []
+            },
+            {
+              "id": 9,
+              "content": "Ajustes na biblioteca unform",
+              "labels": [],
+              "visible": false,
+              "descricao": "Realizar o estudo do Modulo 1",
+              "user": [],
+              "comments": []
+            }
+          ]
+        },
+        {
+          "title": "Concluído",
+          "creatable": true,
+          "done": false,
+          "cards": [
+            {
+              "id": 4,
+              "content": "Adicione um texto",
+              "labels": [],
+              "user": [
+                "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg"
+              ],
+              "visible": true,
+              "descricao": "Adicione uma Descrição",
+              "comments": []
+            },
+            {
+              "id": 13,
+              "content": "Gravar Aula Internacionalização de aplicações Node.js, ReactJS e React Native",
+              "labels": [
+                "#7159c1"
+              ],
+              "visible": false,
+              "descricao": "Realizar o estudo do Modulo 1",
+              "user": [],
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "id": 4
     }
   ],
   "usuarioLogado": {
-    "id": 1,
-    "email": "giovanni.vecchi@gmail.com",
-    "username": "usuario",
-    "imagem": "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg"
+    "username": "joao",
+    "email": "joao@gmail.com",
+    "password": "joao1",
+    "id": 5,
+    "board": [
+      4
+    ]
   },
   "usuario": [
     {
@@ -498,16 +853,18 @@
       "password": "12345",
       "id": 2,
       "board": [
-        2
+        3
       ]
     },
     {
-      "username": "Giovanni Vechi",
+      "username": "Giovanni Vecchi",
       "email": "giovanni@gmail.com",
       "password": "123456",
       "id": 1,
       "board": [
-        1
+        1,
+        3,
+        4
       ]
     },
     {
@@ -516,7 +873,7 @@
       "password": "123456",
       "id": 3,
       "board": [
-        4
+        2
       ]
     },
     {
@@ -533,7 +890,9 @@
       "email": "joao@gmail.com",
       "password": "joao1",
       "id": 5,
-      "board": []
+      "board": [
+        4
+      ]
     },
     {
       "username": "ana maria",
@@ -560,123 +919,41 @@
   "comentarios": [
     {
       "id": 1001,
-      "board": 1,
+      "board": 4,
       "comentario": [
         {
           "id": 1,
-          "board": 1,
-          "username": "usuario",
-          "imagem": "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg",
-          "data": 23,
-          "comment": "teste2\n"
+          "board": 4,
+          "username": "joao",
+          "data": 1,
+          "comment": "Ainda não, estou resolvendo um problema mais urgente"
         },
         {
           "id": 1,
-          "board": 1,
-          "username": "usuario",
-          "imagem": "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg",
-          "data": 23,
-          "comment": "teste1"
-        }
-      ]
-    },
-    {
-      "id": 1,
-      "board": 1,
-      "comentario": [
-        {
-          "id": 1,
-          "board": 1,
-          "username": "usuario",
-          "imagem": "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg",
-          "data": 25,
-          "comment": "viado pra cacete"
+          "board": 4,
+          "username": "Giovanni Vecchi",
+          "data": 1,
+          "comment": "Joao vc nao resolveu isso ainda?"
         },
         {
           "id": 1,
-          "board": 1,
-          "username": "usuario",
-          "imagem": "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg",
-          "data": 24,
-          "comment": "Comentario 2"
-        },
-        {
-          "id": 1,
-          "board": 1,
-          "username": "usuario",
-          "imagem": "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg",
-          "data": 24,
-          "comment": "Comentario 1"
+          "board": 4,
+          "username": "joao",
+          "data": 1,
+          "comment": "Enviando o primeiro comentario do usuaruo joao"
         }
       ]
     },
     {
-      "id": 1007,
-      "board": 1,
+      "id": 1002,
+      "board": 4,
       "comentario": [
         {
           "id": 1,
-          "board": 1,
-          "username": "usuario",
-          "imagem": "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg",
-          "data": 25,
-          "comment": "muito viado"
-        }
-      ]
-    },
-    {
-      "id": 1008,
-      "board": 1,
-      "comentario": [
-        {
-          "id": 1,
-          "board": 1,
-          "username": "usuario",
-          "imagem": "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg",
-          "data": 28,
-          "comment": "teste de preenchimengo"
-        }
-      ]
-    },
-    {
-      "id": 1009,
-      "board": 1,
-      "comentario": [
-        {
-          "id": 1,
-          "board": 1,
-          "username": "usuario",
-          "imagem": "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg",
-          "data": 28,
-          "comment": "mais um teste"
-        }
-      ]
-    },
-    {
-      "id": 1010,
-      "board": 1,
-      "comentario": [
-        {
-          "id": 1,
-          "board": 1,
-          "username": "usuario",
-          "imagem": "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg",
-          "data": 28,
-          "comment": "envio"
-        }
-      ]
-    },
-    {
-      "id": 1011,
-      "board": 1,
-      "comentario": [
-        {
-          "id": 1,
-          "board": 1,
-          "username": "usuario",
-          "imagem": "https://mpng.pngfly.com/20181205/ppu/kisspng-vector-graphics-computer-icons-user-profile-portab-writer-recommend-svg-png-icon-free-download-9768-5c0851b175d215.4257304515440490734826.jpg",
-          "data": 28,
-          "comment": "enviar"
+          "board": 4,
+          "username": "joao",
+          "data": 1,
+          "comment": "Teste"
         }
       ]
     }
