@@ -20,7 +20,7 @@ export default function Quadro(data) {
     axios[method](url, card).then(resp2 => {
       const newUsuario = Usuario;
 
-      if (newUsuario.board === null) {
+      if (newUsuario.board === null || newUsuario.board === "" ) {
         newUsuario.board = [resp2.data.id];
       } else {
         newUsuario.board.push(resp2.data.id);
