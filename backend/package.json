@@ -5,7 +5,7 @@
   "license": "MIT",
   "dependencies": {
     "json-server": "0.13.0",
-    "yarn": "^1.19.1"
+    "yarn": "^1.22.0"
   },
   "scripts": {
     "start": "json-server --watch ./giovanni.vecchi/db.json --port 5000 "
